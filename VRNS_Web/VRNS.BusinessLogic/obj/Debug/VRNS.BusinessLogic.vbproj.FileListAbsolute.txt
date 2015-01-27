@@ -1,0 +1,126 @@
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.dll
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.pdb
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.xml
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.dll
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.dll
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.pdb
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.xml
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.pdb
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.xml
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.Resources.resources
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\obj\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\obj\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.dll
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.xml
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.pdb
+C:\Users\Prakasit\Google Drive\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.dll
+C:\Users\Prakasit\Google Drive\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.pdb
+C:\Users\Prakasit\Google Drive\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.xml
+C:\Users\Prakasit\Google Drive\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.dll
+C:\Users\Prakasit\Google Drive\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.dll
+C:\Users\Prakasit\Google Drive\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.pdb
+C:\Users\Prakasit\Google Drive\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.xml
+C:\Users\Prakasit\Google Drive\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.pdb
+C:\Users\Prakasit\Google Drive\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.xml
+C:\Users\Prakasit\Google Drive\VRNS\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.vbprojResolveAssemblyReference.cache
+C:\Users\Prakasit\Google Drive\VRNS\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.Resources.resources
+C:\Users\Prakasit\Google Drive\VRNS\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.vbproj.GenerateResource.Cache
+C:\Users\Prakasit\Google Drive\VRNS\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.dll
+C:\Users\Prakasit\Google Drive\VRNS\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.xml
+C:\Users\Prakasit\Google Drive\VRNS\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.pdb
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.Resources.resources
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\obj\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\obj\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.dll
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.xml
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.pdb
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.dll
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.pdb
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.xml
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.dll
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.dll
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.pdb
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.xml
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.pdb
+C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.xml
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.dll
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.pdb
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.xml
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.dll
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.dll
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.pdb
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.xml
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.pdb
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.xml
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.Resources.resources
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\obj\Debug\GenerateResource.read.1.tlog
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\obj\Debug\GenerateResource.write.1.tlog
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.dll
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.xml
+E:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.pdb
+F:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.dll
+F:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.pdb
+F:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.xml
+F:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.dll
+F:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.dll
+F:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.pdb
+F:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.xml
+F:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.pdb
+F:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.xml
+F:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.vbprojResolveAssemblyReference.cache
+F:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.Resources.resources
+F:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.vbproj.GenerateResource.Cache
+F:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.dll
+F:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.xml
+F:\IS Project KMITL\VRNS_New\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.pdb
+F:\IS Project KMITL\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.dll
+F:\IS Project KMITL\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.pdb
+F:\IS Project KMITL\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.xml
+F:\IS Project KMITL\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.dll
+F:\IS Project KMITL\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.dll
+F:\IS Project KMITL\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.pdb
+F:\IS Project KMITL\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.xml
+F:\IS Project KMITL\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.pdb
+F:\IS Project KMITL\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.xml
+F:\IS Project KMITL\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.vbprojResolveAssemblyReference.cache
+F:\IS Project KMITL\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.Resources.resources
+F:\IS Project KMITL\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.vbproj.GenerateResource.Cache
+F:\IS Project KMITL\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.dll
+F:\IS Project KMITL\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.xml
+F:\IS Project KMITL\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.pdb
+C:\Users\Prakasit\Google Drive\VRNS\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.dll
+C:\Users\Prakasit\Google Drive\VRNS\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.pdb
+C:\Users\Prakasit\Google Drive\VRNS\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.xml
+C:\Users\Prakasit\Google Drive\VRNS\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.dll
+C:\Users\Prakasit\Google Drive\VRNS\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.dll
+C:\Users\Prakasit\Google Drive\VRNS\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.pdb
+C:\Users\Prakasit\Google Drive\VRNS\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.xml
+C:\Users\Prakasit\Google Drive\VRNS\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.pdb
+C:\Users\Prakasit\Google Drive\VRNS\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.xml
+C:\Users\Prakasit\Google Drive\VRNS\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.vbprojResolveAssemblyReference.cache
+C:\Users\Prakasit\Google Drive\VRNS\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.Resources.resources
+C:\Users\Prakasit\Google Drive\VRNS\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.vbproj.GenerateResource.Cache
+C:\Users\Prakasit\Google Drive\VRNS\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.dll
+C:\Users\Prakasit\Google Drive\VRNS\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.xml
+C:\Users\Prakasit\Google Drive\VRNS\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.pdb
+D:\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.dll
+D:\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.pdb
+D:\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.BusinessLogic.xml
+D:\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.dll
+D:\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.dll
+D:\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.pdb
+D:\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataAccess.xml
+D:\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.pdb
+D:\VRNS_Web\VRNS.BusinessLogic\obj\Debug\ResolveAssemblyReference.cache
+D:\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.Resources.resources
+D:\VRNS_Web\VRNS.BusinessLogic\obj\Debug\GenerateResource.read.1.tlog
+D:\VRNS_Web\VRNS.BusinessLogic\obj\Debug\GenerateResource.write.1.tlog
+D:\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.dll
+D:\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.xml
+D:\VRNS_Web\VRNS.BusinessLogic\obj\Debug\VRNS.BusinessLogic.pdb
+D:\VRNS_Web\VRNS.BusinessLogic\bin\Debug\VRNS.DataModel.xml
+D:\VRNS_Web\VRNS.BusinessLogic\obj\Debug\GenerateResource-cvtres.read.1.tlog
+D:\VRNS_Web\VRNS.BusinessLogic\obj\Debug\GenerateResource-cvtres.write.1.tlog

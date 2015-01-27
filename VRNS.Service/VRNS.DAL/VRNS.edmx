@@ -1,0 +1,1118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="VRNS.Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="VRNSModelStoreContainer">
+          <EntitySet Name="VRNS_Branch" EntityType="VRNS.Model.Store.VRNS_Branch" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VRNS_Department" EntityType="VRNS.Model.Store.VRNS_Department" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VRNS_Device_Registered" EntityType="VRNS.Model.Store.VRNS_Device_Registered" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VRNS_Device_Registered_backup" EntityType="VRNS.Model.Store.VRNS_Device_Registered_backup" store:Type="Tables" store:Schema="dbo" store:Name="VRNS_Device_Registered_backup">
+            <DefiningQuery>SELECT 
+      [VRNS_Device_Registered_backup].[ID] AS [ID], 
+      [VRNS_Device_Registered_backup].[BRANCH_CODE] AS [BRANCH_CODE], 
+      [VRNS_Device_Registered_backup].[WAN_IP] AS [WAN_IP], 
+      [VRNS_Device_Registered_backup].[LAN_IP] AS [LAN_IP], 
+      [VRNS_Device_Registered_backup].[LAN_SUBNET] AS [LAN_SUBNET], 
+      [VRNS_Device_Registered_backup].[ISP] AS [ISP], 
+      [VRNS_Device_Registered_backup].[Cur_Status_CODE] AS [Cur_Status_CODE], 
+      [VRNS_Device_Registered_backup].[Cur_Status_UPD] AS [Cur_Status_UPD], 
+      [VRNS_Device_Registered_backup].[Cur_Status_F] AS [Cur_Status_F], 
+      [VRNS_Device_Registered_backup].[Prev_Status_CODE] AS [Prev_Status_CODE], 
+      [VRNS_Device_Registered_backup].[Prev_Status_UPD] AS [Prev_Status_UPD], 
+      [VRNS_Device_Registered_backup].[LAST_UPD] AS [LAST_UPD], 
+      [VRNS_Device_Registered_backup].[LAST_UPD_LOGIN] AS [LAST_UPD_LOGIN], 
+      [VRNS_Device_Registered_backup].[LAST_UPD_DISPLAY_NM] AS [LAST_UPD_DISPLAY_NM]
+      FROM [dbo].[VRNS_Device_Registered_backup] AS [VRNS_Device_Registered_backup]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VRNS_Employee" EntityType="VRNS.Model.Store.VRNS_Employee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VRNS_JOB" EntityType="VRNS.Model.Store.VRNS_JOB" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VRNS_MA_Team" EntityType="VRNS.Model.Store.VRNS_MA_Team" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VRNS_MA_Topic" EntityType="VRNS.Model.Store.VRNS_MA_Topic" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VRNS_Maintainance_Detail" EntityType="VRNS.Model.Store.VRNS_Maintainance_Detail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VRNS_Maintainance_Record" EntityType="VRNS.Model.Store.VRNS_Maintainance_Record" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VRNS_Member" EntityType="VRNS.Model.Store.VRNS_Member" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VRNS_Status" EntityType="VRNS.Model.Store.VRNS_Status" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VRNS_Title" EntityType="VRNS.Model.Store.VRNS_Title" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_VRNS_Device_Registered_VRNS_Status" Association="VRNS.Model.Store.FK_VRNS_Device_Registered_VRNS_Status">
+            <End Role="VRNS_Status" EntitySet="VRNS_Status" />
+            <End Role="VRNS_Device_Registered" EntitySet="VRNS_Device_Registered" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Employee_VRNS_Department" Association="VRNS.Model.Store.FK_VRNS_Employee_VRNS_Department">
+            <End Role="VRNS_Department" EntitySet="VRNS_Department" />
+            <End Role="VRNS_Employee" EntitySet="VRNS_Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Employee_VRNS_Employee" Association="VRNS.Model.Store.FK_VRNS_Employee_VRNS_Employee">
+            <End Role="VRNS_Branch" EntitySet="VRNS_Branch" />
+            <End Role="VRNS_Employee" EntitySet="VRNS_Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Employee_VRNS_Title" Association="VRNS.Model.Store.FK_VRNS_Employee_VRNS_Title">
+            <End Role="VRNS_Title" EntitySet="VRNS_Title" />
+            <End Role="VRNS_Employee" EntitySet="VRNS_Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_MA_Team_VRNS_Employee" Association="VRNS.Model.Store.FK_VRNS_MA_Team_VRNS_Employee">
+            <End Role="VRNS_Employee" EntitySet="VRNS_Employee" />
+            <End Role="VRNS_MA_Team" EntitySet="VRNS_MA_Team" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Maintainance_Detail_VRNS_Employee" Association="VRNS.Model.Store.FK_VRNS_Maintainance_Detail_VRNS_Employee">
+            <End Role="VRNS_Employee" EntitySet="VRNS_Employee" />
+            <End Role="VRNS_Maintainance_Detail" EntitySet="VRNS_Maintainance_Detail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Maintainance_Detail_VRNS_MA_Team" Association="VRNS.Model.Store.FK_VRNS_Maintainance_Detail_VRNS_MA_Team">
+            <End Role="VRNS_MA_Team" EntitySet="VRNS_MA_Team" />
+            <End Role="VRNS_Maintainance_Detail" EntitySet="VRNS_Maintainance_Detail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Maintainance_Detail_VRNS_Maintainance_Record" Association="VRNS.Model.Store.FK_VRNS_Maintainance_Detail_VRNS_Maintainance_Record">
+            <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
+            <End Role="VRNS_Maintainance_Detail" EntitySet="VRNS_Maintainance_Detail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Maintainance_Record_VRNS_Device_Registered" Association="VRNS.Model.Store.FK_VRNS_Maintainance_Record_VRNS_Device_Registered">
+            <End Role="VRNS_Device_Registered" EntitySet="VRNS_Device_Registered" />
+            <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Maintainance_Record_VRNS_JOB" Association="VRNS.Model.Store.FK_VRNS_Maintainance_Record_VRNS_JOB">
+            <End Role="VRNS_JOB" EntitySet="VRNS_JOB" />
+            <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC" Association="VRNS.Model.Store.FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC">
+            <End Role="VRNS_MA_Topic" EntitySet="VRNS_MA_Topic" />
+            <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record" Association="VRNS.Model.Store.FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record">
+            <End Role="VRNS_JOB" EntitySet="VRNS_JOB" />
+            <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="VRNS_Branch">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Name="CODE" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="250" />
+          <Property Name="TELEPHONE" Type="nvarchar" MaxLength="50" />
+          <Property Name="MOBILE" Type="nvarchar" MaxLength="50" />
+          <Property Name="LAST_UPD" Type="datetime" />
+          <Property Name="LAST_UPD_LOGIN" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD_DISPLAY_NM" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="VRNS_Department">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Name="CODE" Type="int" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="250" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD" Type="datetime" />
+          <Property Name="LAST_UPD_LOGIN" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD_DISPLAY_NM" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="VRNS_Device_Registered">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BRANCH_CODE" Type="nvarchar" MaxLength="30" />
+          <Property Name="WAN_IP" Type="nvarchar" MaxLength="15" />
+          <Property Name="LAN_IP" Type="nvarchar" MaxLength="15" />
+          <Property Name="LAN_SUBNET" Type="nvarchar" MaxLength="15" />
+          <Property Name="ISP" Type="nvarchar" MaxLength="250" />
+          <Property Name="Cur_Status_CODE" Type="int" />
+          <Property Name="Cur_Status_UPD" Type="datetime" />
+          <Property Name="Cur_Status_F" Type="bit" />
+          <Property Name="Prev_Status_CODE" Type="int" />
+          <Property Name="Prev_Status_UPD" Type="datetime" />
+          <Property Name="LAST_UPD" Type="datetime" />
+          <Property Name="LAST_UPD_LOGIN" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD_DISPLAY_NM" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'VRNS.dbo.VRNS_Device_Registered_backup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="VRNS_Device_Registered_backup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BRANCH_CODE" Type="nvarchar" MaxLength="30" />
+          <Property Name="WAN_IP" Type="nvarchar" MaxLength="15" />
+          <Property Name="LAN_IP" Type="nvarchar" MaxLength="15" />
+          <Property Name="LAN_SUBNET" Type="nvarchar" MaxLength="15" />
+          <Property Name="ISP" Type="nvarchar" MaxLength="250" />
+          <Property Name="Cur_Status_CODE" Type="int" />
+          <Property Name="Cur_Status_UPD" Type="datetime" />
+          <Property Name="Cur_Status_F" Type="bit" />
+          <Property Name="Prev_Status_CODE" Type="int" />
+          <Property Name="Prev_Status_UPD" Type="datetime" />
+          <Property Name="LAST_UPD" Type="datetime" />
+          <Property Name="LAST_UPD_LOGIN" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD_DISPLAY_NM" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="VRNS_Employee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="FNAME_EN" Type="nvarchar" MaxLength="250" />
+          <Property Name="LNAME_EN" Type="nvarchar" MaxLength="250" />
+          <Property Name="FNAME_TH" Type="nvarchar" MaxLength="250" />
+          <Property Name="LNAME_TH" Type="nvarchar" MaxLength="250" />
+          <Property Name="MOBILE" Type="nvarchar" MaxLength="50" />
+          <Property Name="MGR_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="DEP_CODE" Type="int" />
+          <Property Name="BRANCH_CODE" Type="nvarchar" MaxLength="30" />
+          <Property Name="TITLE_CODE" Type="int" />
+          <Property Name="LAST_UPD" Type="datetime" />
+          <Property Name="LAST_UPD_LOGIN" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD_DISPLAY_NM" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="VRNS_JOB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CODE" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD" Type="datetime" />
+          <Property Name="LAST_UPD_LOGIN" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD_DISPLAY_NM" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="VRNS_MA_Team">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EMP_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="SKILL" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD" Type="datetime" />
+          <Property Name="LAST_UPD_LOGIN" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD_DISPLAY_NM" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="VRNS_MA_Topic">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Name="CODE" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="NAME" Type="nvarchar" />
+          <Property Name="DESCRIPTION" Type="nvarchar" />
+          <Property Name="LAST_UPD" Type="datetime" />
+          <Property Name="LAST_UPD_LOGIN" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD_DISPLAY_NM" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="VRNS_Maintainance_Detail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Maintainance_Record_ID" Type="bigint" Nullable="false" />
+          <Property Name="Dev_Regis_ID" Type="bigint" />
+          <Property Name="EMP_MA" Type="bigint" />
+          <Property Name="EMP_Contact_ID" Type="nvarchar" MaxLength="10" />
+          <Property Name="LAST_UPD" Type="datetime" />
+          <Property Name="LAST_UPD_LOGIN" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD_DISPLAY_NM" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="VRNS_Maintainance_Record">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Dev_Regis_ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Dev_Regis_ID" Type="bigint" Nullable="false" />
+          <Property Name="MA_TOPIC_CODE" Type="nvarchar" MaxLength="50" />
+          <Property Name="ROOT_CAUSE" Type="nvarchar" />
+          <Property Name="SOLUTION" Type="nvarchar" />
+          <Property Name="ASSIGNEE" Type="bigint" />
+          <Property Name="JOB_ID" Type="int" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="LAST_UPD" Type="datetime" />
+          <Property Name="LAST_UPD_LOGIN" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD_DISPLAY_NM" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="VRNS_Member">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="USER_NAME" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="USER_LOGIN" Type="nvarchar" MaxLength="50" />
+          <Property Name="USER_NAME" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="USER_PASSWORD" Type="nvarchar" MaxLength="50" />
+          <Property Name="ROLE" Type="nvarchar" MaxLength="50" />
+          <Property Name="LAST_UPD" Type="datetime" />
+          <Property Name="LAST_UPD_LOGIN" Type="nvarchar" MaxLength="50" />
+          <Property Name="LAST_UPD_DISPLAY_NM" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="VRNS_Status">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Name="CODE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD" Type="datetime" />
+          <Property Name="LAST_UPD_LOGIN" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD_DISPLAY_NM" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="VRNS_Title">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Name="CODE" Type="int" Nullable="false" />
+          <Property Name="DESCRIPTION_TH" Type="nvarchar" MaxLength="250" />
+          <Property Name="DESCRIPTION_EN" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD" Type="datetime" />
+          <Property Name="LAST_UPD_LOGIN" Type="nvarchar" MaxLength="250" />
+          <Property Name="LAST_UPD_DISPLAY_NM" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <Association Name="FK_VRNS_Device_Registered_VRNS_Status">
+          <End Role="VRNS_Status" Type="VRNS.Model.Store.VRNS_Status" Multiplicity="0..1" />
+          <End Role="VRNS_Device_Registered" Type="VRNS.Model.Store.VRNS_Device_Registered" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Status">
+              <PropertyRef Name="CODE" />
+            </Principal>
+            <Dependent Role="VRNS_Device_Registered">
+              <PropertyRef Name="Cur_Status_CODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Employee_VRNS_Department">
+          <End Role="VRNS_Department" Type="VRNS.Model.Store.VRNS_Department" Multiplicity="0..1" />
+          <End Role="VRNS_Employee" Type="VRNS.Model.Store.VRNS_Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Department">
+              <PropertyRef Name="CODE" />
+            </Principal>
+            <Dependent Role="VRNS_Employee">
+              <PropertyRef Name="DEP_CODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Employee_VRNS_Employee">
+          <End Role="VRNS_Branch" Type="VRNS.Model.Store.VRNS_Branch" Multiplicity="0..1" />
+          <End Role="VRNS_Employee" Type="VRNS.Model.Store.VRNS_Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Branch">
+              <PropertyRef Name="CODE" />
+            </Principal>
+            <Dependent Role="VRNS_Employee">
+              <PropertyRef Name="BRANCH_CODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Employee_VRNS_Title">
+          <End Role="VRNS_Title" Type="VRNS.Model.Store.VRNS_Title" Multiplicity="0..1" />
+          <End Role="VRNS_Employee" Type="VRNS.Model.Store.VRNS_Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Title">
+              <PropertyRef Name="CODE" />
+            </Principal>
+            <Dependent Role="VRNS_Employee">
+              <PropertyRef Name="TITLE_CODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_MA_Team_VRNS_Employee">
+          <End Role="VRNS_Employee" Type="VRNS.Model.Store.VRNS_Employee" Multiplicity="0..1" />
+          <End Role="VRNS_MA_Team" Type="VRNS.Model.Store.VRNS_MA_Team" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Employee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VRNS_MA_Team">
+              <PropertyRef Name="EMP_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Maintainance_Detail_VRNS_Employee">
+          <End Role="VRNS_Employee" Type="VRNS.Model.Store.VRNS_Employee" Multiplicity="0..1" />
+          <End Role="VRNS_Maintainance_Detail" Type="VRNS.Model.Store.VRNS_Maintainance_Detail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Employee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VRNS_Maintainance_Detail">
+              <PropertyRef Name="EMP_Contact_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Maintainance_Detail_VRNS_MA_Team">
+          <End Role="VRNS_MA_Team" Type="VRNS.Model.Store.VRNS_MA_Team" Multiplicity="0..1" />
+          <End Role="VRNS_Maintainance_Detail" Type="VRNS.Model.Store.VRNS_Maintainance_Detail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_MA_Team">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VRNS_Maintainance_Detail">
+              <PropertyRef Name="EMP_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Maintainance_Detail_VRNS_Maintainance_Record">
+          <End Role="VRNS_Maintainance_Record" Type="VRNS.Model.Store.VRNS_Maintainance_Record" Multiplicity="0..1" />
+          <End Role="VRNS_Maintainance_Detail" Type="VRNS.Model.Store.VRNS_Maintainance_Detail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Maintainance_Record">
+              <PropertyRef Name="ID" />
+              <PropertyRef Name="Dev_Regis_ID" />
+            </Principal>
+            <Dependent Role="VRNS_Maintainance_Detail">
+              <PropertyRef Name="Maintainance_Record_ID" />
+              <PropertyRef Name="Dev_Regis_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Maintainance_Record_VRNS_Device_Registered">
+          <End Role="VRNS_Device_Registered" Type="VRNS.Model.Store.VRNS_Device_Registered" Multiplicity="1" />
+          <End Role="VRNS_Maintainance_Record" Type="VRNS.Model.Store.VRNS_Maintainance_Record" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Device_Registered">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VRNS_Maintainance_Record">
+              <PropertyRef Name="Dev_Regis_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Maintainance_Record_VRNS_JOB">
+          <End Role="VRNS_JOB" Type="VRNS.Model.Store.VRNS_JOB" Multiplicity="0..1" />
+          <End Role="VRNS_Maintainance_Record" Type="VRNS.Model.Store.VRNS_Maintainance_Record" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_JOB">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VRNS_Maintainance_Record">
+              <PropertyRef Name="JOB_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC">
+          <End Role="VRNS_MA_Topic" Type="VRNS.Model.Store.VRNS_MA_Topic" Multiplicity="0..1" />
+          <End Role="VRNS_Maintainance_Record" Type="VRNS.Model.Store.VRNS_Maintainance_Record" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_MA_Topic">
+              <PropertyRef Name="CODE" />
+            </Principal>
+            <Dependent Role="VRNS_Maintainance_Record">
+              <PropertyRef Name="MA_TOPIC_CODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record">
+          <End Role="VRNS_JOB" Type="VRNS.Model.Store.VRNS_JOB" Multiplicity="0..1" />
+          <End Role="VRNS_Maintainance_Record" Type="VRNS.Model.Store.VRNS_Maintainance_Record" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_JOB">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VRNS_Maintainance_Record">
+              <PropertyRef Name="JOB_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VRNS.Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="VRNSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="VRNS_Branch" EntityType="VRNS.Model.VRNS_Branch" />
+          <EntitySet Name="VRNS_Department" EntityType="VRNS.Model.VRNS_Department" />
+          <EntitySet Name="VRNS_Device_Registered" EntityType="VRNS.Model.VRNS_Device_Registered" />
+          <EntitySet Name="VRNS_Device_Registered_backup" EntityType="VRNS.Model.VRNS_Device_Registered_backup" />
+          <EntitySet Name="VRNS_Employee" EntityType="VRNS.Model.VRNS_Employee" />
+          <EntitySet Name="VRNS_JOB" EntityType="VRNS.Model.VRNS_JOB" />
+          <EntitySet Name="VRNS_MA_Team" EntityType="VRNS.Model.VRNS_MA_Team" />
+          <EntitySet Name="VRNS_MA_Topic" EntityType="VRNS.Model.VRNS_MA_Topic" />
+          <EntitySet Name="VRNS_Maintainance_Detail" EntityType="VRNS.Model.VRNS_Maintainance_Detail" />
+          <EntitySet Name="VRNS_Maintainance_Record" EntityType="VRNS.Model.VRNS_Maintainance_Record" />
+          <EntitySet Name="VRNS_Member" EntityType="VRNS.Model.VRNS_Member" />
+          <EntitySet Name="VRNS_Status" EntityType="VRNS.Model.VRNS_Status" />
+          <EntitySet Name="VRNS_Title" EntityType="VRNS.Model.VRNS_Title" />
+          <AssociationSet Name="FK_VRNS_Employee_VRNS_Employee" Association="VRNS.Model.FK_VRNS_Employee_VRNS_Employee">
+            <End Role="VRNS_Branch" EntitySet="VRNS_Branch" />
+            <End Role="VRNS_Employee" EntitySet="VRNS_Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Employee_VRNS_Department" Association="VRNS.Model.FK_VRNS_Employee_VRNS_Department">
+            <End Role="VRNS_Department" EntitySet="VRNS_Department" />
+            <End Role="VRNS_Employee" EntitySet="VRNS_Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Device_Registered_VRNS_Status" Association="VRNS.Model.FK_VRNS_Device_Registered_VRNS_Status">
+            <End Role="VRNS_Status" EntitySet="VRNS_Status" />
+            <End Role="VRNS_Device_Registered" EntitySet="VRNS_Device_Registered" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Maintainance_Record_VRNS_Device_Registered" Association="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_Device_Registered">
+            <End Role="VRNS_Device_Registered" EntitySet="VRNS_Device_Registered" />
+            <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Employee_VRNS_Title" Association="VRNS.Model.FK_VRNS_Employee_VRNS_Title">
+            <End Role="VRNS_Title" EntitySet="VRNS_Title" />
+            <End Role="VRNS_Employee" EntitySet="VRNS_Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_MA_Team_VRNS_Employee" Association="VRNS.Model.FK_VRNS_MA_Team_VRNS_Employee">
+            <End Role="VRNS_Employee" EntitySet="VRNS_Employee" />
+            <End Role="VRNS_MA_Team" EntitySet="VRNS_MA_Team" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Maintainance_Detail_VRNS_Employee" Association="VRNS.Model.FK_VRNS_Maintainance_Detail_VRNS_Employee">
+            <End Role="VRNS_Employee" EntitySet="VRNS_Employee" />
+            <End Role="VRNS_Maintainance_Detail" EntitySet="VRNS_Maintainance_Detail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Maintainance_Record_VRNS_JOB" Association="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_JOB">
+            <End Role="VRNS_JOB" EntitySet="VRNS_JOB" />
+            <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record" Association="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record">
+            <End Role="VRNS_JOB" EntitySet="VRNS_JOB" />
+            <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Maintainance_Detail_VRNS_MA_Team" Association="VRNS.Model.FK_VRNS_Maintainance_Detail_VRNS_MA_Team">
+            <End Role="VRNS_MA_Team" EntitySet="VRNS_MA_Team" />
+            <End Role="VRNS_Maintainance_Detail" EntitySet="VRNS_Maintainance_Detail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC" Association="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC">
+            <End Role="VRNS_MA_Topic" EntitySet="VRNS_MA_Topic" />
+            <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Maintainance_Detail_VRNS_Maintainance_Record" Association="VRNS.Model.FK_VRNS_Maintainance_Detail_VRNS_Maintainance_Record">
+            <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
+            <End Role="VRNS_Maintainance_Detail" EntitySet="VRNS_Maintainance_Detail" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="VRNS_Branch">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Type="String" Name="CODE" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NAME" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TELEPHONE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MOBILE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LAST_UPD" />
+          <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VRNS_Employee" Relationship="VRNS.Model.FK_VRNS_Employee_VRNS_Employee" FromRole="VRNS_Branch" ToRole="VRNS_Employee" />
+        </EntityType>
+        <EntityType Name="VRNS_Department">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Type="Int32" Name="CODE" Nullable="false" />
+          <Property Type="String" Name="NAME" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DESCRIPTION" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LAST_UPD" />
+          <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VRNS_Employee" Relationship="VRNS.Model.FK_VRNS_Employee_VRNS_Department" FromRole="VRNS_Department" ToRole="VRNS_Employee" />
+        </EntityType>
+        <EntityType Name="VRNS_Device_Registered">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="BRANCH_CODE" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WAN_IP" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAN_IP" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAN_SUBNET" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ISP" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Cur_Status_CODE" />
+          <Property Type="DateTime" Name="Cur_Status_UPD" />
+          <Property Type="Boolean" Name="Cur_Status_F" />
+          <Property Type="Int32" Name="Prev_Status_CODE" />
+          <Property Type="DateTime" Name="Prev_Status_UPD" />
+          <Property Type="DateTime" Name="LAST_UPD" />
+          <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VRNS_Status" Relationship="VRNS.Model.FK_VRNS_Device_Registered_VRNS_Status" FromRole="VRNS_Device_Registered" ToRole="VRNS_Status" />
+          <NavigationProperty Name="VRNS_Maintainance_Record" Relationship="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_Device_Registered" FromRole="VRNS_Device_Registered" ToRole="VRNS_Maintainance_Record" />
+        </EntityType>
+        <EntityType Name="VRNS_Device_Registered_backup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="BRANCH_CODE" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WAN_IP" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAN_IP" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAN_SUBNET" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ISP" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Cur_Status_CODE" />
+          <Property Type="DateTime" Name="Cur_Status_UPD" />
+          <Property Type="Boolean" Name="Cur_Status_F" />
+          <Property Type="Int32" Name="Prev_Status_CODE" />
+          <Property Type="DateTime" Name="Prev_Status_UPD" />
+          <Property Type="DateTime" Name="LAST_UPD" />
+          <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VRNS_Employee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FNAME_EN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LNAME_EN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FNAME_TH" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LNAME_TH" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MOBILE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MGR_ID" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DEP_CODE" />
+          <Property Type="String" Name="BRANCH_CODE" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="TITLE_CODE" />
+          <Property Type="DateTime" Name="LAST_UPD" />
+          <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VRNS_Branch" Relationship="VRNS.Model.FK_VRNS_Employee_VRNS_Employee" FromRole="VRNS_Employee" ToRole="VRNS_Branch" />
+          <NavigationProperty Name="VRNS_Department" Relationship="VRNS.Model.FK_VRNS_Employee_VRNS_Department" FromRole="VRNS_Employee" ToRole="VRNS_Department" />
+          <NavigationProperty Name="VRNS_Title" Relationship="VRNS.Model.FK_VRNS_Employee_VRNS_Title" FromRole="VRNS_Employee" ToRole="VRNS_Title" />
+          <NavigationProperty Name="VRNS_MA_Team" Relationship="VRNS.Model.FK_VRNS_MA_Team_VRNS_Employee" FromRole="VRNS_Employee" ToRole="VRNS_MA_Team" />
+          <NavigationProperty Name="VRNS_Maintainance_Detail" Relationship="VRNS.Model.FK_VRNS_Maintainance_Detail_VRNS_Employee" FromRole="VRNS_Employee" ToRole="VRNS_Maintainance_Detail" />
+        </EntityType>
+        <EntityType Name="VRNS_JOB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CODE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LAST_UPD" />
+          <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VRNS_Maintainance_Record" Relationship="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_JOB" FromRole="VRNS_JOB" ToRole="VRNS_Maintainance_Record" />
+          <NavigationProperty Name="VRNS_Maintainance_Record1" Relationship="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record" FromRole="VRNS_JOB" ToRole="VRNS_Maintainance_Record" />
+        </EntityType>
+        <EntityType Name="VRNS_MA_Team">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EMP_ID" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SKILL" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LAST_UPD" />
+          <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VRNS_Employee" Relationship="VRNS.Model.FK_VRNS_MA_Team_VRNS_Employee" FromRole="VRNS_MA_Team" ToRole="VRNS_Employee" />
+          <NavigationProperty Name="VRNS_Maintainance_Detail" Relationship="VRNS.Model.FK_VRNS_Maintainance_Detail_VRNS_MA_Team" FromRole="VRNS_MA_Team" ToRole="VRNS_Maintainance_Detail" />
+        </EntityType>
+        <EntityType Name="VRNS_MA_Topic">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Type="String" Name="CODE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NAME" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DESCRIPTION" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LAST_UPD" />
+          <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VRNS_Maintainance_Record" Relationship="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC" FromRole="VRNS_MA_Topic" ToRole="VRNS_Maintainance_Record" />
+        </EntityType>
+        <EntityType Name="VRNS_Maintainance_Detail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="Maintainance_Record_ID" Nullable="false" />
+          <Property Type="Int64" Name="Dev_Regis_ID" />
+          <Property Type="Int64" Name="EMP_MA" />
+          <Property Type="String" Name="EMP_Contact_ID" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LAST_UPD" />
+          <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VRNS_Employee" Relationship="VRNS.Model.FK_VRNS_Maintainance_Detail_VRNS_Employee" FromRole="VRNS_Maintainance_Detail" ToRole="VRNS_Employee" />
+          <NavigationProperty Name="VRNS_MA_Team" Relationship="VRNS.Model.FK_VRNS_Maintainance_Detail_VRNS_MA_Team" FromRole="VRNS_Maintainance_Detail" ToRole="VRNS_MA_Team" />
+          <NavigationProperty Name="VRNS_Maintainance_Record" Relationship="VRNS.Model.FK_VRNS_Maintainance_Detail_VRNS_Maintainance_Record" FromRole="VRNS_Maintainance_Detail" ToRole="VRNS_Maintainance_Record" />
+        </EntityType>
+        <EntityType Name="VRNS_Maintainance_Record">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Dev_Regis_ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="Dev_Regis_ID" Nullable="false" />
+          <Property Type="String" Name="MA_TOPIC_CODE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ROOT_CAUSE" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SOLUTION" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="ASSIGNEE" />
+          <Property Type="Int32" Name="JOB_ID" />
+          <Property Type="Boolean" Name="Status" />
+          <Property Type="DateTime" Name="LAST_UPD" />
+          <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VRNS_Device_Registered" Relationship="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_Device_Registered" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_Device_Registered" />
+          <NavigationProperty Name="VRNS_JOB" Relationship="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_JOB" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_JOB" />
+          <NavigationProperty Name="VRNS_JOB1" Relationship="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_JOB" />
+          <NavigationProperty Name="VRNS_MA_Topic" Relationship="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_MA_Topic" />
+          <NavigationProperty Name="VRNS_Maintainance_Detail" Relationship="VRNS.Model.FK_VRNS_Maintainance_Detail_VRNS_Maintainance_Record" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_Maintainance_Detail" />
+        </EntityType>
+        <EntityType Name="VRNS_Member">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="USER_NAME" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="USER_LOGIN" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="USER_NAME" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="USER_PASSWORD" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ROLE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LAST_UPD" />
+          <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VRNS_Status">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Type="Int32" Name="CODE" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="DESCRIPTION" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LAST_UPD" />
+          <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VRNS_Device_Registered" Relationship="VRNS.Model.FK_VRNS_Device_Registered_VRNS_Status" FromRole="VRNS_Status" ToRole="VRNS_Device_Registered" />
+        </EntityType>
+        <EntityType Name="VRNS_Title">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Type="Int32" Name="CODE" Nullable="false" />
+          <Property Type="String" Name="DESCRIPTION_TH" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DESCRIPTION_EN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LAST_UPD" />
+          <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VRNS_Employee" Relationship="VRNS.Model.FK_VRNS_Employee_VRNS_Title" FromRole="VRNS_Title" ToRole="VRNS_Employee" />
+        </EntityType>
+        <Association Name="FK_VRNS_Employee_VRNS_Employee">
+          <End Type="VRNS.Model.VRNS_Branch" Role="VRNS_Branch" Multiplicity="0..1" />
+          <End Type="VRNS.Model.VRNS_Employee" Role="VRNS_Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Branch">
+              <PropertyRef Name="CODE" />
+            </Principal>
+            <Dependent Role="VRNS_Employee">
+              <PropertyRef Name="BRANCH_CODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Employee_VRNS_Department">
+          <End Type="VRNS.Model.VRNS_Department" Role="VRNS_Department" Multiplicity="0..1" />
+          <End Type="VRNS.Model.VRNS_Employee" Role="VRNS_Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Department">
+              <PropertyRef Name="CODE" />
+            </Principal>
+            <Dependent Role="VRNS_Employee">
+              <PropertyRef Name="DEP_CODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Device_Registered_VRNS_Status">
+          <End Type="VRNS.Model.VRNS_Status" Role="VRNS_Status" Multiplicity="0..1" />
+          <End Type="VRNS.Model.VRNS_Device_Registered" Role="VRNS_Device_Registered" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Status">
+              <PropertyRef Name="CODE" />
+            </Principal>
+            <Dependent Role="VRNS_Device_Registered">
+              <PropertyRef Name="Cur_Status_CODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Maintainance_Record_VRNS_Device_Registered">
+          <End Type="VRNS.Model.VRNS_Device_Registered" Role="VRNS_Device_Registered" Multiplicity="1" />
+          <End Type="VRNS.Model.VRNS_Maintainance_Record" Role="VRNS_Maintainance_Record" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Device_Registered">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VRNS_Maintainance_Record">
+              <PropertyRef Name="Dev_Regis_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Employee_VRNS_Title">
+          <End Type="VRNS.Model.VRNS_Title" Role="VRNS_Title" Multiplicity="0..1" />
+          <End Type="VRNS.Model.VRNS_Employee" Role="VRNS_Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Title">
+              <PropertyRef Name="CODE" />
+            </Principal>
+            <Dependent Role="VRNS_Employee">
+              <PropertyRef Name="TITLE_CODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_MA_Team_VRNS_Employee">
+          <End Type="VRNS.Model.VRNS_Employee" Role="VRNS_Employee" Multiplicity="0..1" />
+          <End Type="VRNS.Model.VRNS_MA_Team" Role="VRNS_MA_Team" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Employee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VRNS_MA_Team">
+              <PropertyRef Name="EMP_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Maintainance_Detail_VRNS_Employee">
+          <End Type="VRNS.Model.VRNS_Employee" Role="VRNS_Employee" Multiplicity="0..1" />
+          <End Type="VRNS.Model.VRNS_Maintainance_Detail" Role="VRNS_Maintainance_Detail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Employee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VRNS_Maintainance_Detail">
+              <PropertyRef Name="EMP_Contact_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Maintainance_Record_VRNS_JOB">
+          <End Type="VRNS.Model.VRNS_JOB" Role="VRNS_JOB" Multiplicity="0..1" />
+          <End Type="VRNS.Model.VRNS_Maintainance_Record" Role="VRNS_Maintainance_Record" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_JOB">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VRNS_Maintainance_Record">
+              <PropertyRef Name="JOB_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record">
+          <End Type="VRNS.Model.VRNS_JOB" Role="VRNS_JOB" Multiplicity="0..1" />
+          <End Type="VRNS.Model.VRNS_Maintainance_Record" Role="VRNS_Maintainance_Record" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_JOB">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VRNS_Maintainance_Record">
+              <PropertyRef Name="JOB_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Maintainance_Detail_VRNS_MA_Team">
+          <End Type="VRNS.Model.VRNS_MA_Team" Role="VRNS_MA_Team" Multiplicity="0..1" />
+          <End Type="VRNS.Model.VRNS_Maintainance_Detail" Role="VRNS_Maintainance_Detail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_MA_Team">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VRNS_Maintainance_Detail">
+              <PropertyRef Name="EMP_MA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC">
+          <End Type="VRNS.Model.VRNS_MA_Topic" Role="VRNS_MA_Topic" Multiplicity="0..1" />
+          <End Type="VRNS.Model.VRNS_Maintainance_Record" Role="VRNS_Maintainance_Record" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_MA_Topic">
+              <PropertyRef Name="CODE" />
+            </Principal>
+            <Dependent Role="VRNS_Maintainance_Record">
+              <PropertyRef Name="MA_TOPIC_CODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Maintainance_Detail_VRNS_Maintainance_Record">
+          <End Type="VRNS.Model.VRNS_Maintainance_Record" Role="VRNS_Maintainance_Record" Multiplicity="0..1" />
+          <End Type="VRNS.Model.VRNS_Maintainance_Detail" Role="VRNS_Maintainance_Detail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Maintainance_Record">
+              <PropertyRef Name="ID" />
+              <PropertyRef Name="Dev_Regis_ID" />
+            </Principal>
+            <Dependent Role="VRNS_Maintainance_Detail">
+              <PropertyRef Name="Maintainance_Record_ID" />
+              <PropertyRef Name="Dev_Regis_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VRNSModelStoreContainer" CdmEntityContainer="VRNSEntities">
+          <EntitySetMapping Name="VRNS_Branch">
+            <EntityTypeMapping TypeName="VRNS.Model.VRNS_Branch">
+              <MappingFragment StoreEntitySet="VRNS_Branch">
+                <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+                <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+                <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+                <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+                <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VRNS_Department">
+            <EntityTypeMapping TypeName="VRNS.Model.VRNS_Department">
+              <MappingFragment StoreEntitySet="VRNS_Department">
+                <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+                <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+                <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VRNS_Device_Registered">
+            <EntityTypeMapping TypeName="VRNS.Model.VRNS_Device_Registered">
+              <MappingFragment StoreEntitySet="VRNS_Device_Registered">
+                <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+                <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+                <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+                <ScalarProperty Name="Prev_Status_UPD" ColumnName="Prev_Status_UPD" />
+                <ScalarProperty Name="Prev_Status_CODE" ColumnName="Prev_Status_CODE" />
+                <ScalarProperty Name="Cur_Status_F" ColumnName="Cur_Status_F" />
+                <ScalarProperty Name="Cur_Status_UPD" ColumnName="Cur_Status_UPD" />
+                <ScalarProperty Name="Cur_Status_CODE" ColumnName="Cur_Status_CODE" />
+                <ScalarProperty Name="ISP" ColumnName="ISP" />
+                <ScalarProperty Name="LAN_SUBNET" ColumnName="LAN_SUBNET" />
+                <ScalarProperty Name="LAN_IP" ColumnName="LAN_IP" />
+                <ScalarProperty Name="WAN_IP" ColumnName="WAN_IP" />
+                <ScalarProperty Name="BRANCH_CODE" ColumnName="BRANCH_CODE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VRNS_Device_Registered_backup">
+            <EntityTypeMapping TypeName="VRNS.Model.VRNS_Device_Registered_backup">
+              <MappingFragment StoreEntitySet="VRNS_Device_Registered_backup">
+                <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+                <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+                <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+                <ScalarProperty Name="Prev_Status_UPD" ColumnName="Prev_Status_UPD" />
+                <ScalarProperty Name="Prev_Status_CODE" ColumnName="Prev_Status_CODE" />
+                <ScalarProperty Name="Cur_Status_F" ColumnName="Cur_Status_F" />
+                <ScalarProperty Name="Cur_Status_UPD" ColumnName="Cur_Status_UPD" />
+                <ScalarProperty Name="Cur_Status_CODE" ColumnName="Cur_Status_CODE" />
+                <ScalarProperty Name="ISP" ColumnName="ISP" />
+                <ScalarProperty Name="LAN_SUBNET" ColumnName="LAN_SUBNET" />
+                <ScalarProperty Name="LAN_IP" ColumnName="LAN_IP" />
+                <ScalarProperty Name="WAN_IP" ColumnName="WAN_IP" />
+                <ScalarProperty Name="BRANCH_CODE" ColumnName="BRANCH_CODE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VRNS_Employee">
+            <EntityTypeMapping TypeName="VRNS.Model.VRNS_Employee">
+              <MappingFragment StoreEntitySet="VRNS_Employee">
+                <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+                <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+                <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+                <ScalarProperty Name="TITLE_CODE" ColumnName="TITLE_CODE" />
+                <ScalarProperty Name="BRANCH_CODE" ColumnName="BRANCH_CODE" />
+                <ScalarProperty Name="DEP_CODE" ColumnName="DEP_CODE" />
+                <ScalarProperty Name="MGR_ID" ColumnName="MGR_ID" />
+                <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+                <ScalarProperty Name="LNAME_TH" ColumnName="LNAME_TH" />
+                <ScalarProperty Name="FNAME_TH" ColumnName="FNAME_TH" />
+                <ScalarProperty Name="LNAME_EN" ColumnName="LNAME_EN" />
+                <ScalarProperty Name="FNAME_EN" ColumnName="FNAME_EN" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VRNS_JOB">
+            <EntityTypeMapping TypeName="VRNS.Model.VRNS_JOB">
+              <MappingFragment StoreEntitySet="VRNS_JOB">
+                <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+                <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+                <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VRNS_MA_Team">
+            <EntityTypeMapping TypeName="VRNS.Model.VRNS_MA_Team">
+              <MappingFragment StoreEntitySet="VRNS_MA_Team">
+                <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+                <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+                <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+                <ScalarProperty Name="SKILL" ColumnName="SKILL" />
+                <ScalarProperty Name="EMP_ID" ColumnName="EMP_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VRNS_MA_Topic">
+            <EntityTypeMapping TypeName="VRNS.Model.VRNS_MA_Topic">
+              <MappingFragment StoreEntitySet="VRNS_MA_Topic">
+                <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+                <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+                <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VRNS_Maintainance_Detail">
+            <EntityTypeMapping TypeName="VRNS.Model.VRNS_Maintainance_Detail">
+              <MappingFragment StoreEntitySet="VRNS_Maintainance_Detail">
+                <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+                <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+                <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+                <ScalarProperty Name="EMP_Contact_ID" ColumnName="EMP_Contact_ID" />
+                <ScalarProperty Name="EMP_MA" ColumnName="EMP_MA" />
+                <ScalarProperty Name="Dev_Regis_ID" ColumnName="Dev_Regis_ID" />
+                <ScalarProperty Name="Maintainance_Record_ID" ColumnName="Maintainance_Record_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VRNS_Maintainance_Record">
+            <EntityTypeMapping TypeName="VRNS.Model.VRNS_Maintainance_Record">
+              <MappingFragment StoreEntitySet="VRNS_Maintainance_Record">
+                <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+                <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+                <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
+                <ScalarProperty Name="ASSIGNEE" ColumnName="ASSIGNEE" />
+                <ScalarProperty Name="SOLUTION" ColumnName="SOLUTION" />
+                <ScalarProperty Name="ROOT_CAUSE" ColumnName="ROOT_CAUSE" />
+                <ScalarProperty Name="MA_TOPIC_CODE" ColumnName="MA_TOPIC_CODE" />
+                <ScalarProperty Name="Dev_Regis_ID" ColumnName="Dev_Regis_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VRNS_Member">
+            <EntityTypeMapping TypeName="VRNS.Model.VRNS_Member">
+              <MappingFragment StoreEntitySet="VRNS_Member">
+                <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+                <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+                <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+                <ScalarProperty Name="ROLE" ColumnName="ROLE" />
+                <ScalarProperty Name="USER_PASSWORD" ColumnName="USER_PASSWORD" />
+                <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+                <ScalarProperty Name="USER_LOGIN" ColumnName="USER_LOGIN" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VRNS_Status">
+            <EntityTypeMapping TypeName="VRNS.Model.VRNS_Status">
+              <MappingFragment StoreEntitySet="VRNS_Status">
+                <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+                <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+                <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VRNS_Title">
+            <EntityTypeMapping TypeName="VRNS.Model.VRNS_Title">
+              <MappingFragment StoreEntitySet="VRNS_Title">
+                <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+                <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+                <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+                <ScalarProperty Name="DESCRIPTION_EN" ColumnName="DESCRIPTION_EN" />
+                <ScalarProperty Name="DESCRIPTION_TH" ColumnName="DESCRIPTION_TH" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="VRNS" ZoomLevel="61">
+        <EntityTypeShape EntityType="VRNS.Model.VRNS_Branch" Width="1.5" PointX="0.75" PointY="20.25" Height="2.5571907552083388" />
+        <EntityTypeShape EntityType="VRNS.Model.VRNS_Department" Width="1.5" PointX="0.75" PointY="23.625" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="VRNS.Model.VRNS_Device_Registered" Width="1.5" PointX="0.75" PointY="7.875" Height="4.0956022135416674" />
+        <EntityTypeShape EntityType="VRNS.Model.VRNS_Device_Registered_backup" Width="1.5" PointX="5.75" PointY="5.75" Height="3.7109993489583388" />
+        <EntityTypeShape EntityType="VRNS.Model.VRNS_Employee" Width="1.5" PointX="3" PointY="22.5" Height="4.480205078124996" />
+        <EntityTypeShape EntityType="VRNS.Model.VRNS_JOB" Width="1.5" PointX="0.75" PointY="1.75" Height="2.5571907552083393" />
+        <EntityTypeShape EntityType="VRNS.Model.VRNS_MA_Team" Width="1.5" PointX="3" PointY="17.875" Height="2.5571907552083388" />
+        <EntityTypeShape EntityType="VRNS.Model.VRNS_MA_Topic" Width="1.5" PointX="0.75" PointY="16.75" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="VRNS.Model.VRNS_Maintainance_Detail" Width="1.5" PointX="5.25" PointY="1.5" Height="3.1340950520833282" />
+        <EntityTypeShape EntityType="VRNS.Model.VRNS_Maintainance_Record" Width="1.5" PointX="3" PointY="1" Height="4.0956022135416674" />
+        <EntityTypeShape EntityType="VRNS.Model.VRNS_Member" Width="1.5" PointX="2.75" PointY="6.75" Height="2.5571907552083246" />
+        <EntityTypeShape EntityType="VRNS.Model.VRNS_Status" Width="1.5" PointX="1.5" PointY="12.875" Height="2.172587890624996" />
+        <EntityTypeShape EntityType="VRNS.Model.VRNS_Title" Width="1.5" PointX="0.75" PointY="26.75" Height="2.3648893229166674" />
+        <AssociationConnector Association="VRNS.Model.FK_VRNS_Employee_VRNS_Employee" >
+          <ConnectorPoint PointX="2.25" PointY="22.653595377604169" />
+          <ConnectorPoint PointX="3" PointY="22.653595377604169" />
+        </AssociationConnector>
+        <AssociationConnector Association="VRNS.Model.FK_VRNS_Employee_VRNS_Department" >
+          <ConnectorPoint PointX="2.25" PointY="24.807444661458334" />
+          <ConnectorPoint PointX="3" PointY="24.807444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="VRNS.Model.FK_VRNS_Device_Registered_VRNS_Status" >
+          <ConnectorPoint PointX="1.875" PointY="12.875" />
+          <ConnectorPoint PointX="1.875" PointY="11.970602213541667" />
+        </AssociationConnector>
+        <AssociationConnector Association="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_Device_Registered" >
+          <ConnectorPoint PointX="2.25" PointY="10.670146484374996" />
+          <ConnectorPoint PointX="4.40625" PointY="10.670146484374996" />
+          <ConnectorPoint PointX="4.40625" PointY="5.0956022135416674" />
+        </AssociationConnector>
+        <AssociationConnector Association="VRNS.Model.FK_VRNS_Employee_VRNS_Title" >
+          <ConnectorPoint PointX="2.25" PointY="28.04754770052083" />
+          <ConnectorPoint PointX="3.75" PointY="28.04754770052083" />
+          <ConnectorPoint PointX="3.75" PointY="26.980205078124996" />
+        </AssociationConnector>
+        <AssociationConnector Association="VRNS.Model.FK_VRNS_MA_Team_VRNS_Employee" >
+          <ConnectorPoint PointX="3.75" PointY="22.5" />
+          <ConnectorPoint PointX="3.75" PointY="20.432190755208339" />
+        </AssociationConnector>
+        <AssociationConnector Association="VRNS.Model.FK_VRNS_Maintainance_Detail_VRNS_Employee" >
+          <ConnectorPoint PointX="4.5" PointY="24.740102539062498" />
+          <ConnectorPoint PointX="5.46875" PointY="24.740102539062498" />
+          <ConnectorPoint PointX="5.46875" PointY="4.6340950520833282" />
+        </AssociationConnector>
+        <AssociationConnector Association="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_JOB" >
+          <ConnectorPoint PointX="2.25" PointY="3.0285953776041694" />
+          <ConnectorPoint PointX="3" PointY="3.0285953776041694" />
+        </AssociationConnector>
+        <AssociationConnector Association="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record" >
+          <ConnectorPoint PointX="2.25" PointY="2.3267976888020847" />
+          <ConnectorPoint PointX="3" PointY="2.3267976888020847" />
+        </AssociationConnector>
+        <AssociationConnector Association="VRNS.Model.FK_VRNS_Maintainance_Detail_VRNS_MA_Team" >
+          <ConnectorPoint PointX="4.5" PointY="19.153595377604169" />
+          <ConnectorPoint PointX="5.3281225" PointY="19.153595377604169" />
+          <ConnectorPoint PointX="5.3281225" PointY="4.6340950520833282" />
+        </AssociationConnector>
+        <AssociationConnector Association="VRNS.Model.FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC" >
+          <ConnectorPoint PointX="2.25" PointY="17.932444661458334" />
+          <ConnectorPoint PointX="2.75" PointY="17.932444661458334" />
+          <ConnectorPoint PointX="2.75" PointY="17.625" />
+          <ConnectorPoint PointX="4.75" PointY="17.625" />
+          <ConnectorPoint PointX="4.75" PointY="5.4706022135416674" />
+          <ConnectorPoint PointX="4.489583333333333" PointY="5.4706022135416665" />
+          <ConnectorPoint PointX="4.322916666666667" PointY="5.4706022135416674" />
+          <ConnectorPoint PointX="3.671873" PointY="5.4706022135416674" />
+          <ConnectorPoint PointX="3.671873" PointY="5.0956022135416674" />
+        </AssociationConnector>
+        <AssociationConnector Association="VRNS.Model.FK_VRNS_Maintainance_Detail_VRNS_Maintainance_Record" >
+          <ConnectorPoint PointX="4.5" PointY="3.0670475260416641" />
+          <ConnectorPoint PointX="5.25" PointY="3.0670475260416641" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

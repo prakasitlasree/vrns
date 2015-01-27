@@ -1,0 +1,12 @@
+﻿ 
+.toolbar li {
+display:block;
+background-color:#eee;
+border:1px solid;
+border-color:#f3f3f3 #bbb #bbb #f3f3f3;
+margin:0;
+padding:5px;
+zoom: 1;
+
+}
+ 

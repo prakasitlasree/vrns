@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="~\Default.aspx" title="Home "  description="">
+		<siteMapNode url="~\WelcomePage.aspx" title="DashBoard "  description="">
+		</siteMapNode>
+		<siteMapNode url="~\Admin.aspx" title="Administrator "  description="">
+		</siteMapNode>
+		<siteMapNode url="~\ListOnlineBranch.aspx" title="List Online Branch "  description="">
+		</siteMapNode>
+		<siteMapNode url="~\ListOfflineBranch.aspx" title="List Offline Branch "  description="">
+		</siteMapNode>
+		<siteMapNode url="~\MasterData.aspx" title="Master Data "  description="">
+		</siteMapNode>
+		<siteMapNode url="~\DownTimeStatistics.aspx" title="Down Time Statistics "  description="">
+		</siteMapNode>
+    <siteMapNode url="~\MAStatusDetails.aspx" title="Maintainance Details "  description="">
+    </siteMapNode>
+	</siteMapNode>
+
+</siteMap>
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+F:\IS Project KMITL\VRNS.Service\DebugProject\bin\Debug\DebugProject.exe.config
+F:\IS Project KMITL\VRNS.Service\DebugProject\obj\x86\Debug\DebugProject.vbprojResolveAssemblyReference.cache
+F:\IS Project KMITL\VRNS.Service\DebugProject\obj\x86\Debug\DebugProject.Resources.resources
+F:\IS Project KMITL\VRNS.Service\DebugProject\obj\x86\Debug\DebugProject.vbproj.GenerateResource.Cache
+F:\IS Project KMITL\VRNS.Service\DebugProject\bin\Debug\DebugProject.exe
+F:\IS Project KMITL\VRNS.Service\DebugProject\bin\Debug\DebugProject.pdb
+F:\IS Project KMITL\VRNS.Service\DebugProject\bin\Debug\DebugProject.xml
+F:\IS Project KMITL\VRNS.Service\DebugProject\bin\Debug\VRNS.DAL.dll
+F:\IS Project KMITL\VRNS.Service\DebugProject\bin\Debug\VRNS.DAL.pdb
+F:\IS Project KMITL\VRNS.Service\DebugProject\bin\Debug\VRNS.DAL.xml
+F:\IS Project KMITL\VRNS.Service\DebugProject\obj\x86\Debug\DebugProject.exe
+F:\IS Project KMITL\VRNS.Service\DebugProject\obj\x86\Debug\DebugProject.xml
+F:\IS Project KMITL\VRNS.Service\DebugProject\obj\x86\Debug\DebugProject.pdb
+D:\VRNS.Service\DebugProject\bin\Debug\DebugProject.exe.config
+D:\VRNS.Service\DebugProject\bin\Debug\DebugProject.exe
+D:\VRNS.Service\DebugProject\bin\Debug\DebugProject.pdb
+D:\VRNS.Service\DebugProject\bin\Debug\DebugProject.xml
+D:\VRNS.Service\DebugProject\bin\Debug\VRNS.DAL.dll
+D:\VRNS.Service\DebugProject\bin\Debug\VRNS.DAL.pdb
+D:\VRNS.Service\DebugProject\bin\Debug\VRNS.DAL.xml
+D:\VRNS.Service\DebugProject\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\VRNS.Service\DebugProject\obj\x86\Debug\DebugProject.Resources.resources
+D:\VRNS.Service\DebugProject\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\VRNS.Service\DebugProject\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\VRNS.Service\DebugProject\obj\x86\Debug\DebugProject.exe
+D:\VRNS.Service\DebugProject\obj\x86\Debug\DebugProject.xml
+D:\VRNS.Service\DebugProject\obj\x86\Debug\DebugProject.pdb

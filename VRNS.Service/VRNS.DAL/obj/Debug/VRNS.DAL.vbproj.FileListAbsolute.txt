@@ -1,0 +1,31 @@
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.DAL\bin\Debug\VRNS.DAL.dll.config
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.DAL\bin\Debug\VRNS.DAL.dll
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.DAL\bin\Debug\VRNS.DAL.pdb
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.DAL\bin\Debug\VRNS.DAL.xml
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.DAL\obj\Debug\VRNS.DAL.Resources.resources
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.DAL\obj\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.DAL\obj\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.DAL\obj\Debug\VRNS.DAL.dll
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.DAL\obj\Debug\VRNS.DAL.xml
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.DAL\obj\Debug\VRNS.DAL.pdb
+F:\IS Project KMITL\VRNS.Service\VRNS.DAL\obj\Debug\VRNS.DAL.Resources.resources
+F:\IS Project KMITL\VRNS.Service\VRNS.DAL\obj\Debug\VRNS.DAL.vbproj.GenerateResource.Cache
+F:\IS Project KMITL\VRNS.Service\VRNS.DAL\obj\Debug\VRNS.DAL.dll
+F:\IS Project KMITL\VRNS.Service\VRNS.DAL\obj\Debug\VRNS.DAL.xml
+F:\IS Project KMITL\VRNS.Service\VRNS.DAL\obj\Debug\VRNS.DAL.pdb
+F:\IS Project KMITL\VRNS.Service\VRNS.DAL\bin\Debug\VRNS.DAL.dll.config
+F:\IS Project KMITL\VRNS.Service\VRNS.DAL\bin\Debug\VRNS.DAL.dll
+F:\IS Project KMITL\VRNS.Service\VRNS.DAL\bin\Debug\VRNS.DAL.pdb
+F:\IS Project KMITL\VRNS.Service\VRNS.DAL\bin\Debug\VRNS.DAL.xml
+D:\VRNS.Service\VRNS.DAL\bin\Debug\VRNS.DAL.dll.config
+D:\VRNS.Service\VRNS.DAL\bin\Debug\VRNS.DAL.dll
+D:\VRNS.Service\VRNS.DAL\bin\Debug\VRNS.DAL.pdb
+D:\VRNS.Service\VRNS.DAL\bin\Debug\VRNS.DAL.xml
+D:\VRNS.Service\VRNS.DAL\obj\Debug\ResolveAssemblyReference.cache
+D:\VRNS.Service\VRNS.DAL\obj\Debug\VRNS.DAL.Resources.resources
+D:\VRNS.Service\VRNS.DAL\obj\Debug\GenerateResource.read.1.tlog
+D:\VRNS.Service\VRNS.DAL\obj\Debug\GenerateResource.write.1.tlog
+D:\VRNS.Service\VRNS.DAL\obj\Debug\VRNS.DAL.dll
+D:\VRNS.Service\VRNS.DAL\obj\Debug\VRNS.DAL.xml
+D:\VRNS.Service\VRNS.DAL\obj\Debug\VRNS.DAL.pdb
