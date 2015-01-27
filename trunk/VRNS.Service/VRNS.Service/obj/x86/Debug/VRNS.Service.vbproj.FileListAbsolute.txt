@@ -1,0 +1,48 @@
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.Service\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.Resources.resources
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.Service\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.Service\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.VRNS_Service.VRNS_Service.resources
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.Service\bin\Debug\VRNS.Service.exe
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.Service\bin\Debug\VRNS.Service.pdb
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.Service\bin\Debug\VRNS.Service.xml
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.exe
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.xml
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.pdb
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.Service\bin\Debug\VRNS.Service.exe.config
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.Service\bin\Debug\VRNS.DAL.dll
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.Service\bin\Debug\VRNS.DAL.pdb
+C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS.Service\VRNS.Service\bin\Debug\VRNS.DAL.xml
+F:\IS Project KMITL\VRNS.Service\VRNS.Service\bin\Debug\VRNS.Service.exe.config
+F:\IS Project KMITL\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.exe
+F:\IS Project KMITL\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.xml
+F:\IS Project KMITL\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.pdb
+E:\IS Project KMITL\VRNS.Service\VRNS.Service\bin\Debug\VRNS.Service.exe.config
+E:\IS Project KMITL\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.exe
+E:\IS Project KMITL\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.xml
+E:\IS Project KMITL\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.pdb
+F:\IS Project KMITL\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.vbprojResolveAssemblyReference.cache
+F:\IS Project KMITL\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.Resources.resources
+F:\IS Project KMITL\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.VRNS_Service.VRNS_Service.resources
+F:\IS Project KMITL\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.vbproj.GenerateResource.Cache
+F:\IS Project KMITL\VRNS.Service\VRNS.Service\bin\Debug\VRNS.Service.exe
+F:\IS Project KMITL\VRNS.Service\VRNS.Service\bin\Debug\VRNS.Service.pdb
+F:\IS Project KMITL\VRNS.Service\VRNS.Service\bin\Debug\VRNS.Service.xml
+F:\IS Project KMITL\VRNS.Service\VRNS.Service\bin\Debug\VRNS.DAL.dll
+F:\IS Project KMITL\VRNS.Service\VRNS.Service\bin\Debug\VRNS.DAL.pdb
+F:\IS Project KMITL\VRNS.Service\VRNS.Service\bin\Debug\VRNS.DAL.xml
+D:\VRNS.Service\VRNS.Service\bin\Debug\VRNS.Service.exe.config
+D:\VRNS.Service\VRNS.Service\bin\Debug\VRNS.Service.exe
+D:\VRNS.Service\VRNS.Service\bin\Debug\VRNS.Service.pdb
+D:\VRNS.Service\VRNS.Service\bin\Debug\VRNS.Service.xml
+D:\VRNS.Service\VRNS.Service\bin\Debug\VRNS.DAL.dll
+D:\VRNS.Service\VRNS.Service\bin\Debug\VRNS.DAL.pdb
+D:\VRNS.Service\VRNS.Service\bin\Debug\VRNS.DAL.xml
+D:\VRNS.Service\VRNS.Service\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.Resources.resources
+D:\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.VRNS_Service.VRNS_Service.resources
+D:\VRNS.Service\VRNS.Service\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\VRNS.Service\VRNS.Service\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.exe
+D:\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.xml
+D:\VRNS.Service\VRNS.Service\obj\x86\Debug\VRNS.Service.pdb

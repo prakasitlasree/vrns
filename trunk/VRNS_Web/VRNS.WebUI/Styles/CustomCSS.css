@@ -1,0 +1,15 @@
+﻿
+.divNavigation
+{
+    text-align: center;
+    
+    margin: 0px; 
+    margin-right: 3px;
+    width:24%;
+    float: left ;
+}
+.btn_image
+{
+    width:22px;
+    height:22px;
+}
