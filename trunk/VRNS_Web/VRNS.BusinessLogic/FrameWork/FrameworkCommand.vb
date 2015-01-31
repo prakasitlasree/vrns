@@ -84,9 +84,7 @@ Namespace Framework
             Try
                 If _isIntialized = False Then Throw New InvalidOperationException("Command must be intialized before calling execute, add Command.Initialize before Command.Execute.")
 
-
-                CheckFunctionalAccessControl()
-
+                 
                 ExecuteCommand()
 
                 _executeSuccess = True
@@ -131,35 +129,13 @@ Namespace Framework
 
         End Sub
 
-        ''' <summary>
-        ''' CheckFunctionalAccessControl function will use current user name and child command authorization code in authorization data source.
-        ''' </summary>
-        ''' <remarks></remarks>
-        Private Sub CheckFunctionalAccessControl()
-
-            'Me.WriteTraceLog("Check Access Control For: " & Me.GetType.ToString & " Code: " & Me.AuthorizationCode)
-
-            If Me.FunctionCode <> "" Then
-                'implement here
-
-                'Check authorization from data source by using
-                'Me.CurrentUser and Me.AuthorizationCode 
-                'function must throw exception in case of user does not have permission to stop command from execute.
-            End If
-
-
-        End Sub
+       
 #End Region
 
 #Region "ChildCommandImplementation"
         Protected MustOverride Overrides Sub ExecuteCommand()
  
-        Protected Overridable ReadOnly Property FunctionCode() As String
-            Get
-                Return ""
-            End Get
-        End Property
-
+         
 #End Region
 
     End Class

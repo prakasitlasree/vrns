@@ -6,20 +6,7 @@ VRNS.BusinessLogic
 </name>
 </assembly>
 <members>
-<member name="P:VRNS.BusinessLogic.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:VRNS.BusinessLogic.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:VRNS.BusinessLogic.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="M:VRNS.BusinessLogic.Framework.FrameworkCommand`1.Initialize(System.String,System.String)">
+<member name="M:VRNS.BusinessLogic.Framework.FrameworkCommand`1.Initialize(System.String,System.String)">
 	<summary>
  Command must be intialized before calling execute, add Command.Initialize before Command.Execute.
  Parameter userName come from custom authentication then store username in Session value and pass to command
@@ -34,11 +21,19 @@ VRNS.BusinessLogic
  Caller can call this method for the command without authoriaztion required.
  </summary>
 	<remarks></remarks>
-</member><member name="M:VRNS.BusinessLogic.Framework.FrameworkCommand`1.CheckFunctionalAccessControl">
+</member><member name="P:VRNS.BusinessLogic.My.Resources.Resources.ResourceManager">
 	<summary>
- CheckFunctionalAccessControl function will use current user name and child command authorization code in authorization data source.
- </summary>
-	<remarks></remarks>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:VRNS.BusinessLogic.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:VRNS.BusinessLogic.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
 </member>
 </members>
 </doc>

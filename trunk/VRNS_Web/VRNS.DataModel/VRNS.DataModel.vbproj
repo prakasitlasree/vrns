@@ -69,6 +69,7 @@
     <Compile Include="CustomEntity\VRNS_Device_Registered.vb" />
     <Compile Include="CustomEntity\VRNS_Maintainance_Detail.vb" />
     <Compile Include="CustomEntity\VRNS_Maintainance_Record.vb" />
+    <Compile Include="CustomEntity\VRNS_Member.vb" />
     <Compile Include="GET_TOP10_DOWN_Result.vb">
       <DependentUpon>VRNS.tt</DependentUpon>
     </Compile>
@@ -88,9 +89,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="VRNS.vb">
-      <DependentUpon>VRNS.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>VRNS.tt</DependentUpon>
     </Compile>
     <Compile Include="VRNS_Branch.vb">
       <DependentUpon>VRNS.tt</DependentUpon>
@@ -120,6 +121,9 @@
       <DependentUpon>VRNS.tt</DependentUpon>
     </Compile>
     <Compile Include="VRNS_Member.vb">
+      <DependentUpon>VRNS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VRNS_ROLE.vb">
       <DependentUpon>VRNS.tt</DependentUpon>
     </Compile>
     <Compile Include="VRNS_Status.vb">

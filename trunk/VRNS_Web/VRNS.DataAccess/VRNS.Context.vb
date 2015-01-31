@@ -77,36 +77,6 @@ Partial Public Class VRNSEntities
     End Property
     Private _vRNS_Employee As ObjectSet(Of VRNS_Employee)
 
-    Public ReadOnly Property VRNS_Status() As ObjectSet(Of VRNS_Status)
-        Get
-            If _vRNS_Status Is Nothing Then
-                _vRNS_Status = CreateObjectSet(Of VRNS_Status)("VRNS_Status")
-            End If
-            Return _vRNS_Status
-        End Get
-    End Property
-    Private _vRNS_Status As ObjectSet(Of VRNS_Status)
-
-    Public ReadOnly Property VRNS_Title() As ObjectSet(Of VRNS_Title)
-        Get
-            If _vRNS_Title Is Nothing Then
-                _vRNS_Title = CreateObjectSet(Of VRNS_Title)("VRNS_Title")
-            End If
-            Return _vRNS_Title
-        End Get
-    End Property
-    Private _vRNS_Title As ObjectSet(Of VRNS_Title)
-
-    Public ReadOnly Property VRNS_Member() As ObjectSet(Of VRNS_Member)
-        Get
-            If _vRNS_Member Is Nothing Then
-                _vRNS_Member = CreateObjectSet(Of VRNS_Member)("VRNS_Member")
-            End If
-            Return _vRNS_Member
-        End Get
-    End Property
-    Private _vRNS_Member As ObjectSet(Of VRNS_Member)
-
     Public ReadOnly Property VRNS_JOB() As ObjectSet(Of VRNS_JOB)
         Get
             If _vRNS_JOB Is Nothing Then
@@ -156,6 +126,46 @@ Partial Public Class VRNSEntities
         End Get
     End Property
     Private _vRNS_Maintainance_Record As ObjectSet(Of VRNS_Maintainance_Record)
+
+    Public ReadOnly Property VRNS_Member() As ObjectSet(Of VRNS_Member)
+        Get
+            If _vRNS_Member Is Nothing Then
+                _vRNS_Member = CreateObjectSet(Of VRNS_Member)("VRNS_Member")
+            End If
+            Return _vRNS_Member
+        End Get
+    End Property
+    Private _vRNS_Member As ObjectSet(Of VRNS_Member)
+
+    Public ReadOnly Property VRNS_ROLE() As ObjectSet(Of VRNS_ROLE)
+        Get
+            If _vRNS_ROLE Is Nothing Then
+                _vRNS_ROLE = CreateObjectSet(Of VRNS_ROLE)("VRNS_ROLE")
+            End If
+            Return _vRNS_ROLE
+        End Get
+    End Property
+    Private _vRNS_ROLE As ObjectSet(Of VRNS_ROLE)
+
+    Public ReadOnly Property VRNS_Status() As ObjectSet(Of VRNS_Status)
+        Get
+            If _vRNS_Status Is Nothing Then
+                _vRNS_Status = CreateObjectSet(Of VRNS_Status)("VRNS_Status")
+            End If
+            Return _vRNS_Status
+        End Get
+    End Property
+    Private _vRNS_Status As ObjectSet(Of VRNS_Status)
+
+    Public ReadOnly Property VRNS_Title() As ObjectSet(Of VRNS_Title)
+        Get
+            If _vRNS_Title Is Nothing Then
+                _vRNS_Title = CreateObjectSet(Of VRNS_Title)("VRNS_Title")
+            End If
+            Return _vRNS_Title
+        End Get
+    End Property
+    Private _vRNS_Title As ObjectSet(Of VRNS_Title)
 
 #End Region
 #Region "Function Imports"

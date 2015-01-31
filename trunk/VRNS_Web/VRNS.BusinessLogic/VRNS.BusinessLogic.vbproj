@@ -74,6 +74,7 @@
     <Compile Include="Command\GetMATeamCommand.vb" />
     <Compile Include="Command\GetMATopicCommand.vb" />
     <Compile Include="Command\GetMemberCommand.vb" />
+    <Compile Include="Command\GetROLECommand.vb" />
     <Compile Include="Command\GetStatusCommand.vb" />
     <Compile Include="Command\GETTOP10Command.vb" />
     <Compile Include="FrameWork\BaseCommand.vb" />

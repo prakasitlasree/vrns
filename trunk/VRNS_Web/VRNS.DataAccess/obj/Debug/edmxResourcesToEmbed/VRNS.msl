@@ -29,12 +29,12 @@
     <EntitySetMapping Name="VRNS_Device_Registered">
       <EntityTypeMapping TypeName="VRNSModel.VRNS_Device_Registered">
         <MappingFragment StoreEntitySet="VRNS_Device_Registered">
-          <ScalarProperty Name="Cur_Status_F" ColumnName="Cur_Status_F" />
           <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
           <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
           <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
           <ScalarProperty Name="Prev_Status_UPD" ColumnName="Prev_Status_UPD" />
           <ScalarProperty Name="Prev_Status_CODE" ColumnName="Prev_Status_CODE" />
+          <ScalarProperty Name="Cur_Status_F" ColumnName="Cur_Status_F" />
           <ScalarProperty Name="Cur_Status_UPD" ColumnName="Cur_Status_UPD" />
           <ScalarProperty Name="Cur_Status_CODE" ColumnName="Cur_Status_CODE" />
           <ScalarProperty Name="ISP" ColumnName="ISP" />
@@ -61,43 +61,6 @@
           <ScalarProperty Name="FNAME_TH" ColumnName="FNAME_TH" />
           <ScalarProperty Name="LNAME_EN" ColumnName="LNAME_EN" />
           <ScalarProperty Name="FNAME_EN" ColumnName="FNAME_EN" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="VRNS_Status">
-      <EntityTypeMapping TypeName="VRNSModel.VRNS_Status">
-        <MappingFragment StoreEntitySet="VRNS_Status">
-          <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
-          <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
-          <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
-          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
-          <ScalarProperty Name="CODE" ColumnName="CODE" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="VRNS_Title">
-      <EntityTypeMapping TypeName="VRNSModel.VRNS_Title">
-        <MappingFragment StoreEntitySet="VRNS_Title">
-          <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
-          <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
-          <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
-          <ScalarProperty Name="DESCRIPTION_EN" ColumnName="DESCRIPTION_EN" />
-          <ScalarProperty Name="DESCRIPTION_TH" ColumnName="DESCRIPTION_TH" />
-          <ScalarProperty Name="CODE" ColumnName="CODE" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="VRNS_Member">
-      <EntityTypeMapping TypeName="VRNSModel.VRNS_Member">
-        <MappingFragment StoreEntitySet="VRNS_Member">
-          <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
-          <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
-          <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
-          <ScalarProperty Name="ROLE" ColumnName="ROLE" />
-          <ScalarProperty Name="USER_PASSWORD" ColumnName="USER_PASSWORD" />
-          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
-          <ScalarProperty Name="USER_LOGIN" ColumnName="USER_LOGIN" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -155,10 +118,10 @@
     <EntitySetMapping Name="VRNS_Maintainance_Record">
       <EntityTypeMapping TypeName="VRNSModel.VRNS_Maintainance_Record">
         <MappingFragment StoreEntitySet="VRNS_Maintainance_Record">
-          <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
           <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
           <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
           <ScalarProperty Name="ASSIGNEE" ColumnName="ASSIGNEE" />
           <ScalarProperty Name="SOLUTION" ColumnName="SOLUTION" />
@@ -169,14 +132,59 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="GETTOP10_DOWNTIME" FunctionName="VRNSModel.Store.GET_TOP10_DOWN">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="VRNSModel.GET_TOP10_DOWN_Result">
-          <ScalarProperty Name="Dev_Regis_ID" ColumnName="Dev_Regis_ID" />
-          <ScalarProperty Name="BRANCH_CODE" ColumnName="BRANCH_CODE" />
-          <ScalarProperty Name="row" ColumnName="row" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
+    <EntitySetMapping Name="VRNS_Member">
+      <EntityTypeMapping TypeName="VRNSModel.VRNS_Member">
+        <MappingFragment StoreEntitySet="VRNS_Member">
+          <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+          <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+          <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+          <ScalarProperty Name="PHOTO_TYPE" ColumnName="PHOTO_TYPE" />
+          <ScalarProperty Name="PHOTO" ColumnName="PHOTO" />
+          <ScalarProperty Name="HOME_TEL" ColumnName="HOME_TEL" />
+          <ScalarProperty Name="MOBILE_TEL" ColumnName="MOBILE_TEL" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="ROLE_ID" ColumnName="ROLE_ID" />
+          <ScalarProperty Name="DISPLAY_NAME" ColumnName="DISPLAY_NAME" />
+          <ScalarProperty Name="USER_PASSWORD" ColumnName="USER_PASSWORD" />
+          <ScalarProperty Name="USER_LOGIN" ColumnName="USER_LOGIN" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VRNS_ROLE">
+      <EntityTypeMapping TypeName="VRNSModel.VRNS_ROLE">
+        <MappingFragment StoreEntitySet="VRNS_ROLE">
+          <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+          <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+          <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VRNS_Status">
+      <EntityTypeMapping TypeName="VRNSModel.VRNS_Status">
+        <MappingFragment StoreEntitySet="VRNS_Status">
+          <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+          <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+          <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VRNS_Title">
+      <EntityTypeMapping TypeName="VRNSModel.VRNS_Title">
+        <MappingFragment StoreEntitySet="VRNS_Title">
+          <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+          <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+          <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+          <ScalarProperty Name="DESCRIPTION_EN" ColumnName="DESCRIPTION_EN" />
+          <ScalarProperty Name="DESCRIPTION_TH" ColumnName="DESCRIPTION_TH" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

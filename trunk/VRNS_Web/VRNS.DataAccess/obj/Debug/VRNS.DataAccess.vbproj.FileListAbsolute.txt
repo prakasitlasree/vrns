@@ -87,3 +87,16 @@ D:\VRNS_Web\VRNS.DataAccess\obj\Debug\VRNS.DataAccess.pdb
 D:\VRNS_Web\VRNS.DataAccess\bin\Debug\VRNS.DataModel.xml
 D:\VRNS_Web\VRNS.DataAccess\obj\Debug\GenerateResource-cvtres.read.1.tlog
 D:\VRNS_Web\VRNS.DataAccess\obj\Debug\GenerateResource-cvtres.write.1.tlog
+D:\Work\vrns\VRNS_Web\VRNS.DataAccess\bin\Debug\VRNS.DataAccess.dll.config
+D:\Work\vrns\VRNS_Web\VRNS.DataAccess\bin\Debug\VRNS.DataAccess.dll
+D:\Work\vrns\VRNS_Web\VRNS.DataAccess\bin\Debug\VRNS.DataAccess.pdb
+D:\Work\vrns\VRNS_Web\VRNS.DataAccess\bin\Debug\VRNS.DataAccess.xml
+D:\Work\vrns\VRNS_Web\VRNS.DataAccess\bin\Debug\VRNS.DataModel.dll
+D:\Work\vrns\VRNS_Web\VRNS.DataAccess\bin\Debug\VRNS.DataModel.pdb
+D:\Work\vrns\VRNS_Web\VRNS.DataAccess\bin\Debug\VRNS.DataModel.xml
+D:\Work\vrns\VRNS_Web\VRNS.DataAccess\obj\Debug\VRNS.DataAccess.vbprojResolveAssemblyReference.cache
+D:\Work\vrns\VRNS_Web\VRNS.DataAccess\obj\Debug\VRNS.DataAccess.Resources.resources
+D:\Work\vrns\VRNS_Web\VRNS.DataAccess\obj\Debug\VRNS.DataAccess.vbproj.GenerateResource.Cache
+D:\Work\vrns\VRNS_Web\VRNS.DataAccess\obj\Debug\VRNS.DataAccess.dll
+D:\Work\vrns\VRNS_Web\VRNS.DataAccess\obj\Debug\VRNS.DataAccess.xml
+D:\Work\vrns\VRNS_Web\VRNS.DataAccess\obj\Debug\VRNS.DataAccess.pdb
