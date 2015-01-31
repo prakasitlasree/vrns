@@ -13,6 +13,7 @@
     <link href="~/Styles/menu.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/Styles/custom-theme/jquery-ui-1.10.0.custom.css" />
     <link href="~/Styles/Site.css" rel="stylesheet" />
+    <link href="Styles/metro-css/metro-bootstrap.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Expires" content="0" />
     <meta http-equiv="Cache-Control" content="no-cache" />
@@ -34,9 +35,6 @@
             </asp:ToolkitScriptManager>
             <div class="banner">
                 <div class="banner-title">
-
-                    
-
                     <asp:Label ID="lblProjectTitle" runat="server"></asp:Label>
                 </div>
             </div>
@@ -51,34 +49,38 @@
                     </asp:SiteMapPath>
                 </div>
                 <div class="userdisplay">
-                    <asp:Label ID="lblUserDisplay" runat="server" Text="ชื่อผู้ใช้งาน: สมชาย ใจดี"></asp:Label>
+                    <a href="Profiles.aspx?action=self">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/common/defaultperson.png"
+                            Width="25px" />
+                        <asp:Label ID="Label1" runat="server" Text="ชื่อผู้ใช้งาน: "></asp:Label>
+                        <asp:Label ID="lblUserDisplay" runat="server" Text=""></asp:Label>
+                    </a>
                 </div>
             </div>
             <div id="body-content">
                 <div class="content-wrapper">
                     <div class="centercontentpage">
-                        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" >
-                        </asp:ContentPlaceHolder> 
+                        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent">
+                        </asp:ContentPlaceHolder>
                         <div>
                             <asp:ContentPlaceHolder runat="server" ID="MainContent">
-                            </asp:ContentPlaceHolder> 
-                            
+                            </asp:ContentPlaceHolder>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="footer">
-                <span>&copy;&nbsp;Verification system for reliability of the connection the corporate
-                    network and services. All rights reserved.</span>
+                <span>2015 &copy;&nbsp;Network Stability Monitoring and Resolution Support System. All rights
+                    reserved.</span>
             </div>
         </div>
     </div>
     <div>
-       <asp:ContentPlaceHolder ID="ScriptPlaceHolder" runat="server">
-        
-        </asp:ContentPlaceHolder> 
+        <asp:ContentPlaceHolder ID="ScriptPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
     </div>
-      <asp:Button ID="btnDisableEnter" runat="server" Text="" OnClientClick="return false;" style="display:none;"/>
+    <asp:Button ID="btnDisableEnter" runat="server" Text="" OnClientClick="return false;"
+        Style="display: none;" />
     </form>
 </body>
 </html>

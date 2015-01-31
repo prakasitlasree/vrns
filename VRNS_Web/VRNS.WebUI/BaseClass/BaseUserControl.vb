@@ -52,9 +52,7 @@ Public Class BaseUserControl
     End Sub
 
     Private Sub Page_Init(sender As Object, e As System.EventArgs) Handles Me.Init
-        _fiCode = Request.QueryString("ficode")
-        _asofYear = Request.QueryString("yr")
-        If _asofYear = "" Then _asofYear = Now.Year.ToString
+         
     End Sub
  
  

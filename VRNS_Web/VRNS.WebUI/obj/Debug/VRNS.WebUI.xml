@@ -6,7 +6,7 @@ VRNS.WebUI
 </name>
 </assembly>
 <members>
-<member name="F:VRNS.WebUI.MAStatusDetails.UpdatePanel1">
+<member name="F:VRNS.WebUI.Profiles.UpdatePanel1">
 	<summary>
 UpdatePanel1 control.
 </summary>
@@ -14,47 +14,167 @@ UpdatePanel1 control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:VRNS.WebUI.MAStatusDetails.LeftMenu1">
+</member><member name="F:VRNS.WebUI.Profiles.Image2">
 	<summary>
-LeftMenu1 control.
+Image2 control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:VRNS.WebUI.MAStatusDetails.gridData">
+</member><member name="F:VRNS.WebUI.Profiles.cmdNew">
 	<summary>
-gridData control.
+cmdNew control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:VRNS.WebUI.MAStatusDetails.txt_solution">
+</member><member name="F:VRNS.WebUI.Profiles.txtUSER_LOGIN">
 	<summary>
-txt_solution control.
+txtUSER_LOGIN control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:VRNS.WebUI.MAStatusDetails.Dev_Regis_ID">
+</member><member name="F:VRNS.WebUI.Profiles.txtUSER_PASSWORD">
 	<summary>
-Dev_Regis_ID control.
+txtUSER_PASSWORD control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:VRNS.WebUI.MAStatusDetails.chkStatus">
+</member><member name="F:VRNS.WebUI.Profiles.txtDISPLAY_NAME">
 	<summary>
-chkStatus control.
+txtDISPLAY_NAME control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:VRNS.WebUI.MAStatusDetails.btnEditConfirm">
+</member><member name="F:VRNS.WebUI.Profiles.ddlROLE">
+	<summary>
+ddlROLE control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Profiles.txtEMAIL">
+	<summary>
+txtEMAIL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Profiles.txtMOBILE_TEL">
+	<summary>
+txtMOBILE_TEL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Profiles.txtHOME_TEL">
+	<summary>
+txtHOME_TEL control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Profiles.Save">
+	<summary>
+Save control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Profiles.Cancle">
+	<summary>
+Cancle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Profiles.popup">
+	<summary>
+popup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Profiles.lnkFake">
+	<summary>
+lnkFake control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Profiles.pnlEdit">
+	<summary>
+pnlEdit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Profiles.popupcontent">
+	<summary>
+popupcontent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Profiles.hdfRowIndex">
+	<summary>
+hdfRowIndex control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Profiles.lblPopupTitle">
+	<summary>
+lblPopupTitle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Profiles.FileUploadDoc">
+	<summary>
+FileUploadDoc control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Profiles.RequiredFieldValidator1">
+	<summary>
+RequiredFieldValidator1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Profiles.valFileUpload">
+	<summary>
+valFileUpload control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Profiles.btnEditConfirm">
 	<summary>
 btnEditConfirm control.
 </summary>
@@ -62,7 +182,7 @@ btnEditConfirm control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:VRNS.WebUI.MAStatusDetails.btnEditCancel">
+</member><member name="F:VRNS.WebUI.Profiles.btnEditCancel">
 	<summary>
 btnEditCancel control.
 </summary>
@@ -70,81 +190,25 @@ btnEditCancel control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:VRNS.WebUI.OnlineBranch.UpdatePanel1">
+</member><member name="F:VRNS.WebUI.Profiles.vldsDocInfo">
+	<summary>
+vldsDocInfo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.AccessDeniedPage.lbError">
+	<summary>
+lbError control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI._Default.UpdatePanel1">
 	<summary>
 UpdatePanel1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.OnlineBranch.LeftMenu1">
-	<summary>
-LeftMenu1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.OnlineBranch.txt_branchCode">
-	<summary>
-txt_branchCode control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.OnlineBranch.btn_search">
-	<summary>
-btn_search control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.OnlineBranch.txt_branchName">
-	<summary>
-txt_branchName control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.OnlineBranch.txt_branchLAN">
-	<summary>
-txt_branchLAN control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.OnlineBranch.gridData">
-	<summary>
-gridData control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.DownTimeStatistics.UpdatePanel1">
-	<summary>
-UpdatePanel1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.DownTimeStatistics.LeftMenu1">
-	<summary>
-LeftMenu1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.DownTimeStatistics.gridData">
-	<summary>
-gridData control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -177,279 +241,6 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:VRNS.WebUI._Default.Btn_Back">
 	<summary>
 Btn_Back control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.MasterData.UpdatePanel1">
-	<summary>
-UpdatePanel1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.MasterData.LeftMenuMasterData1">
-	<summary>
-LeftMenuMasterData1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="P:VRNS.WebUI.My.MyWebExtension.Application">
-	<summary>
- Returns information about the current application.
- </summary>
-</member><member name="P:VRNS.WebUI.My.MyWebExtension.Computer">
-	<summary>
- Returns information about the host computer.
- </summary>
-</member><member name="P:VRNS.WebUI.My.MyWebExtension.User">
-	<summary>
- Returns information for the current Web user.
- </summary>
-</member><member name="P:VRNS.WebUI.My.MyWebExtension.Request">
-	<summary>
- Returns Request object.
- </summary>
-</member><member name="P:VRNS.WebUI.My.MyWebExtension.Response">
-	<summary>
- Returns Response object.
- </summary>
-</member><member name="P:VRNS.WebUI.My.MyWebExtension.Log">
-	<summary>
- Returns the Asp log object.
- </summary>
-</member><member name="P:VRNS.WebUI.My.MyWebExtension.WebServices">
-	<summary>
- Provides access to WebServices added to this project.
- </summary>
-</member><member name="T:VRNS.WebUI.My.MyWebExtension">
-	<summary>
- Module used to define the properties that are available in the My Namespace for Web projects.
- </summary>
-	<remarks></remarks>
-</member><member name="F:VRNS.WebUI.Site.head">
-	<summary>
-head control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Site.Form1">
-	<summary>
-Form1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Site.ToolkitScriptManager1">
-	<summary>
-ToolkitScriptManager1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Site.lblProjectTitle">
-	<summary>
-lblProjectTitle control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Site.MySiteMapPath">
-	<summary>
-MySiteMapPath control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Site.lblUserDisplay">
-	<summary>
-lblUserDisplay control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Site.FeaturedContent">
-	<summary>
-FeaturedContent control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Site.MainContent">
-	<summary>
-MainContent control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Site.ScriptPlaceHolder">
-	<summary>
-ScriptPlaceHolder control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Site.btnDisableEnter">
-	<summary>
-btnDisableEnter control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.UpdatePanel1">
-	<summary>
-UpdatePanel1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.LeftMenu1">
-	<summary>
-LeftMenu1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.gridData">
-	<summary>
-gridData control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.cmdNew">
-	<summary>
-cmdNew control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.lnkFake">
-	<summary>
-lnkFake control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.pnlEdit">
-	<summary>
-pnlEdit control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.lblPopupTitle">
-	<summary>
-lblPopupTitle control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.txtUserLogin">
-	<summary>
-txtUserLogin control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.rf1">
-	<summary>
-rf1 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.txtUserName">
-	<summary>
-txtUserName control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.rf2">
-	<summary>
-rf2 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.txt_password">
-	<summary>
-txt_password control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.rf3">
-	<summary>
-rf3 control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.ddl_role">
-	<summary>
-ddl_role control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.valSum">
-	<summary>
-valSum control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.btnEditConfirm">
-	<summary>
-btnEditConfirm control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.btnEditCancel">
-	<summary>
-btnEditCancel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:VRNS.WebUI.Admin.popup">
-	<summary>
-popup control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -599,17 +390,161 @@ popup control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:VRNS.WebUI.AccessDeniedPage.lbError">
+</member><member name="F:VRNS.WebUI.SessionTimeout.lnkBack">
 	<summary>
-lbError control.
+lnkBack control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:VRNS.WebUI.SessionTimeout.lnkBack">
+</member><member name="F:VRNS.WebUI.Site.head">
 	<summary>
-lnkBack control.
+head control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Site.Form1">
+	<summary>
+Form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Site.ToolkitScriptManager1">
+	<summary>
+ToolkitScriptManager1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Site.lblProjectTitle">
+	<summary>
+lblProjectTitle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Site.MySiteMapPath">
+	<summary>
+MySiteMapPath control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Site.Image1">
+	<summary>
+Image1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Site.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Site.lblUserDisplay">
+	<summary>
+lblUserDisplay control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Site.FeaturedContent">
+	<summary>
+FeaturedContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Site.MainContent">
+	<summary>
+MainContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Site.ScriptPlaceHolder">
+	<summary>
+ScriptPlaceHolder control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Site.btnDisableEnter">
+	<summary>
+btnDisableEnter control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.OnlineBranch.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.OnlineBranch.LeftMenu1">
+	<summary>
+LeftMenu1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.OnlineBranch.txt_branchCode">
+	<summary>
+txt_branchCode control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.OnlineBranch.btn_search">
+	<summary>
+btn_search control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.OnlineBranch.txt_branchName">
+	<summary>
+txt_branchName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.OnlineBranch.txt_branchLAN">
+	<summary>
+txt_branchLAN control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.OnlineBranch.gridData">
+	<summary>
+gridData control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -767,6 +702,295 @@ popup control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:VRNS.WebUI.Admin.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.LeftMenu1">
+	<summary>
+LeftMenu1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.cmdNew">
+	<summary>
+cmdNew control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.txt_Employee_id">
+	<summary>
+txt_Employee_id control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.cmdseach">
+	<summary>
+cmdseach control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.gridData">
+	<summary>
+gridData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.lnkFake">
+	<summary>
+lnkFake control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.pnlEdit">
+	<summary>
+pnlEdit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.lblPopupTitle">
+	<summary>
+lblPopupTitle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.displayname">
+	<summary>
+displayname control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.txtUserLogin">
+	<summary>
+txtUserLogin control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.rf1">
+	<summary>
+rf1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.txt_password">
+	<summary>
+txt_password control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.rf3">
+	<summary>
+rf3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.ddl_role">
+	<summary>
+ddl_role control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.valSum">
+	<summary>
+valSum control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.btnEditConfirm">
+	<summary>
+btnEditConfirm control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.btnEditCancel">
+	<summary>
+btnEditCancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.Admin.popup">
+	<summary>
+popup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.MasterData.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.MasterData.LeftMenuMasterData1">
+	<summary>
+LeftMenuMasterData1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.MAStatusDetails.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.MAStatusDetails.LeftMenu1">
+	<summary>
+LeftMenu1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.MAStatusDetails.gridData">
+	<summary>
+gridData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.MAStatusDetails.txt_solution">
+	<summary>
+txt_solution control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.MAStatusDetails.Dev_Regis_ID">
+	<summary>
+Dev_Regis_ID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.MAStatusDetails.chkStatus">
+	<summary>
+chkStatus control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.MAStatusDetails.btnEditConfirm">
+	<summary>
+btnEditConfirm control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.MAStatusDetails.btnEditCancel">
+	<summary>
+btnEditCancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.DownTimeStatistics.UpdatePanel1">
+	<summary>
+UpdatePanel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.DownTimeStatistics.LeftMenu1">
+	<summary>
+LeftMenu1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:VRNS.WebUI.DownTimeStatistics.gridData">
+	<summary>
+gridData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:VRNS.WebUI.My.MyWebExtension.Application">
+	<summary>
+ Returns information about the current application.
+ </summary>
+</member><member name="P:VRNS.WebUI.My.MyWebExtension.Computer">
+	<summary>
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:VRNS.WebUI.My.MyWebExtension.User">
+	<summary>
+ Returns information for the current Web user.
+ </summary>
+</member><member name="P:VRNS.WebUI.My.MyWebExtension.Request">
+	<summary>
+ Returns Request object.
+ </summary>
+</member><member name="P:VRNS.WebUI.My.MyWebExtension.Response">
+	<summary>
+ Returns Response object.
+ </summary>
+</member><member name="P:VRNS.WebUI.My.MyWebExtension.Log">
+	<summary>
+ Returns the Asp log object.
+ </summary>
+</member><member name="P:VRNS.WebUI.My.MyWebExtension.WebServices">
+	<summary>
+ Provides access to WebServices added to this project.
+ </summary>
+</member><member name="T:VRNS.WebUI.My.MyWebExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+	<remarks></remarks>
 </member>
 </members>
 </doc>

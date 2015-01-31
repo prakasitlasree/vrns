@@ -22,14 +22,14 @@ Public Class _Default
             cmd.Execute()
             Dim authenobj = cmd.Result
             If authenobj IsNot Nothing Then
-                Session("login") = authenobj.USER_NAME
+                Session("login") = authenobj
                 Response.Redirect("WelcomePage.aspx")
             Else
                 Response.Redirect("AccessDeniedPage.aspx")
             End If
 
         Else
-
+            Me.ShowAlert("กรุณากรอก username หรือ password")
         End If
 
     End Sub

@@ -18,9 +18,8 @@ Namespace Command
 
         Protected Overrides Sub ExecuteCommand()
 
-            Dim ctx As New VRNSEntities
-
-            Dim obj = ctx.VRNS_Member.Where(Function(x) x.USER_LOGIN = _user And x.USER_PASSWORD = _pass).FirstOrDefault()
+            Dim ctx As New VRNSEntities 
+            Dim obj = ctx.VRNS_Member.Include("VRNS_ROLE").Where(Function(x) x.USER_LOGIN = _user And x.USER_PASSWORD = _pass).FirstOrDefault()
 
             Result = obj
 

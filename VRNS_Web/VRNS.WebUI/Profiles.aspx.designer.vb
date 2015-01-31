@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Admin
+Partial Public Class Profiles
 
     '''<summary>
     '''UpdatePanel1 control.
@@ -23,13 +23,13 @@ Partial Public Class Admin
     Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
 
     '''<summary>
-    '''LeftMenu1 control.
+    '''Image2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents LeftMenu1 As Global.VRNS.WebUI.LeftMenu
+    Protected WithEvents Image2 As Global.System.Web.UI.WebControls.Image
 
     '''<summary>
     '''cmdNew control.
@@ -41,31 +41,94 @@ Partial Public Class Admin
     Protected WithEvents cmdNew As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
-    '''txt_Employee_id control.
+    '''txtUSER_LOGIN control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txt_Employee_id As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtUSER_LOGIN As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''cmdseach control.
+    '''txtUSER_PASSWORD control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents cmdseach As Global.System.Web.UI.WebControls.ImageButton
+    Protected WithEvents txtUSER_PASSWORD As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''gridData control.
+    '''txtDISPLAY_NAME control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents gridData As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents txtDISPLAY_NAME As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''ddlROLE control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ddlROLE As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''txtEMAIL control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtEMAIL As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtMOBILE_TEL control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtMOBILE_TEL As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtHOME_TEL control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtHOME_TEL As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Save control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Save As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Cancle control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Cancle As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''popup control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents popup As Global.AjaxControlToolkit.ModalPopupExtender
 
     '''<summary>
     '''lnkFake control.
@@ -86,6 +149,24 @@ Partial Public Class Admin
     Protected WithEvents pnlEdit As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
+    '''popupcontent control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents popupcontent As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''hdfRowIndex control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hdfRowIndex As Global.System.Web.UI.WebControls.HiddenField
+
+    '''<summary>
     '''lblPopupTitle control.
     '''</summary>
     '''<remarks>
@@ -95,67 +176,31 @@ Partial Public Class Admin
     Protected WithEvents lblPopupTitle As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''displayname control.
+    '''FileUploadDoc control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents displayname As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents FileUploadDoc As Global.System.Web.UI.WebControls.FileUpload
 
     '''<summary>
-    '''txtUserLogin control.
+    '''RequiredFieldValidator1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtUserLogin As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents RequiredFieldValidator1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
-    '''rf1 control.
+    '''valFileUpload control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents rf1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
-
-    '''<summary>
-    '''txt_password control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txt_password As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''rf3 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents rf3 As Global.System.Web.UI.WebControls.RequiredFieldValidator
-
-    '''<summary>
-    '''ddl_role control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ddl_role As Global.System.Web.UI.WebControls.DropDownList
-
-    '''<summary>
-    '''valSum control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents valSum As Global.System.Web.UI.WebControls.ValidationSummary
+    Protected WithEvents valFileUpload As Global.System.Web.UI.WebControls.RegularExpressionValidator
 
     '''<summary>
     '''btnEditConfirm control.
@@ -176,11 +221,11 @@ Partial Public Class Admin
     Protected WithEvents btnEditCancel As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''popup control.
+    '''vldsDocInfo control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents popup As Global.AjaxControlToolkit.ModalPopupExtender
+    Protected WithEvents vldsDocInfo As Global.System.Web.UI.WebControls.ValidationSummary
 End Class

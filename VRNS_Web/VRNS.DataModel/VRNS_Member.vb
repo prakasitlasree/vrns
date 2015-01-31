@@ -21,17 +21,82 @@ Namespace EntityModel
     
         Public Overridable Property USER_LOGIN As String
     
-        Public Overridable Property USER_NAME As String
-    
         Public Overridable Property USER_PASSWORD As String
     
-        Public Overridable Property ROLE As String
+        Public Overridable Property DISPLAY_NAME As String
+    
+        Public Overridable Property ROLE_ID As Nullable(Of Integer)
+            Get
+                Return _rOLE_ID
+            End Get
+            Set(ByVal value As Nullable(Of Integer))
+                Try
+                    _settingFK = True
+                    If Not Equals (_rOLE_ID, value) Then
+                        If VRNS_ROLE IsNot Nothing AndAlso Not Equals(VRNS_ROLE.ID, value) Then
+                            VRNS_ROLE = Nothing
+                        End If
+                        _rOLE_ID = value
+                    End If
+                Finally
+                    _settingFK = False
+                End Try
+            End Set
+        End Property
+        Private _rOLE_ID As Nullable(Of Integer)
+    
+        Public Overridable Property EMAIL As String
+    
+        Public Overridable Property MOBILE_TEL As String
+    
+        Public Overridable Property HOME_TEL As String
+    
+        Public Overridable Property PHOTO As Byte()
+    
+        Public Overridable Property PHOTO_TYPE As String
     
         Public Overridable Property LAST_UPD As Nullable(Of Date)
     
         Public Overridable Property LAST_UPD_LOGIN As String
     
         Public Overridable Property LAST_UPD_DISPLAY_NM As String
+
+        #End Region
+        #Region "Navigation Properties"
+    
+        Public Overridable Property VRNS_ROLE As VRNS_ROLE
+            Get
+                Return _vRNS_ROLE
+            End Get
+            Set(ByVal value As VRNS_ROLE)
+                If _vRNS_ROLE IsNot value Then
+                    Dim previousValue As VRNS_ROLE = _vRNS_ROLE
+                    _vRNS_ROLE = value
+                    FixupVRNS_ROLE(previousValue)
+                End If
+            End Set
+        End Property
+        Private _vRNS_ROLE As VRNS_ROLE
+
+        #End Region
+        #Region "Association Fixup"
+        Private _settingFK As Boolean = False
+    
+        Private Sub FixupVRNS_ROLE(ByVal previousValue As VRNS_ROLE)
+            If previousValue IsNot Nothing AndAlso previousValue.VRNS_Member.Contains(Me) Then
+                previousValue.VRNS_Member.Remove(Me)
+            End If
+            If VRNS_ROLE IsNot Nothing Then
+                If Not VRNS_ROLE.VRNS_Member.Contains(Me) Then
+                    VRNS_ROLE.VRNS_Member.Add(Me)
+                End If
+                If Not Equals(ROLE_ID, VRNS_ROLE.ID) Then
+                    ROLE_ID = VRNS_ROLE.ID
+                End If
+            ElseIf Not _settingFK Then
+                ROLE_ID = Nothing
+            End If
+        End Sub
 
         #End Region
     End Class

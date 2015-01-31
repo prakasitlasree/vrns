@@ -11,6 +11,7 @@
     <EntitySet Name="VRNS_Maintainance_Detail" EntityType="VRNSModel.Store.VRNS_Maintainance_Detail" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="VRNS_Maintainance_Record" EntityType="VRNSModel.Store.VRNS_Maintainance_Record" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="VRNS_Member" EntityType="VRNSModel.Store.VRNS_Member" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VRNS_ROLE" EntityType="VRNSModel.Store.VRNS_ROLE" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="VRNS_Status" EntityType="VRNSModel.Store.VRNS_Status" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="VRNS_Title" EntityType="VRNSModel.Store.VRNS_Title" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK_VRNS_Device_Registered_VRNS_Status" Association="VRNSModel.Store.FK_VRNS_Device_Registered_VRNS_Status">
@@ -60,6 +61,10 @@
     <AssociationSet Name="FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record" Association="VRNSModel.Store.FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record">
       <End Role="VRNS_JOB" EntitySet="VRNS_JOB" />
       <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VRNS_Member_VRNS_ROLE" Association="VRNSModel.Store.FK_VRNS_Member_VRNS_ROLE">
+      <End Role="VRNS_ROLE" EntitySet="VRNS_ROLE" />
+      <End Role="VRNS_Member" EntitySet="VRNS_Member" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="VRNS_Branch">
@@ -137,7 +142,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID" Type="bigint" Nullable="false" />
     <Property Name="EMP_ID" Type="nvarchar" MaxLength="10" />
     <Property Name="SKILL" Type="nvarchar" MaxLength="250" />
     <Property Name="LAST_UPD" Type="datetime" />
@@ -159,7 +164,7 @@
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ID" Type="bigint" Nullable="false" />
     <Property Name="Maintainance_Record_ID" Type="bigint" Nullable="false" />
     <Property Name="Dev_Regis_ID" Type="bigint" />
     <Property Name="EMP_MA" Type="bigint" />
@@ -188,13 +193,28 @@
   <EntityType Name="VRNS_Member">
     <Key>
       <PropertyRef Name="ID" />
-      <PropertyRef Name="USER_NAME" />
     </Key>
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="USER_LOGIN" Type="nvarchar" MaxLength="50" />
-    <Property Name="USER_NAME" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="USER_PASSWORD" Type="nvarchar" MaxLength="50" />
-    <Property Name="ROLE" Type="nvarchar" MaxLength="50" />
+    <Property Name="DISPLAY_NAME" Type="nvarchar" MaxLength="500" />
+    <Property Name="ROLE_ID" Type="int" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
+    <Property Name="MOBILE_TEL" Type="nvarchar" MaxLength="50" />
+    <Property Name="HOME_TEL" Type="nvarchar" MaxLength="50" />
+    <Property Name="PHOTO" Type="varbinary(max)" />
+    <Property Name="PHOTO_TYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="LAST_UPD" Type="datetime" />
+    <Property Name="LAST_UPD_LOGIN" Type="nvarchar" MaxLength="50" />
+    <Property Name="LAST_UPD_DISPLAY_NM" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="VRNS_ROLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="CODE" Type="nvarchar" MaxLength="250" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="250" />
     <Property Name="LAST_UPD" Type="datetime" />
     <Property Name="LAST_UPD_LOGIN" Type="nvarchar" MaxLength="50" />
     <Property Name="LAST_UPD_DISPLAY_NM" Type="nvarchar" MaxLength="50" />
@@ -366,5 +386,16 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Function Name="GET_TOP10_DOWN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Association Name="FK_VRNS_Member_VRNS_ROLE">
+    <End Role="VRNS_ROLE" Type="VRNSModel.Store.VRNS_ROLE" Multiplicity="0..1" />
+    <End Role="VRNS_Member" Type="VRNSModel.Store.VRNS_Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VRNS_ROLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VRNS_Member">
+        <PropertyRef Name="ROLE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

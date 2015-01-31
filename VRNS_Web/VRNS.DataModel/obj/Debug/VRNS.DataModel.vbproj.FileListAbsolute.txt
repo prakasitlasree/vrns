@@ -64,3 +64,11 @@ D:\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.xml
 D:\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.pdb
 D:\VRNS_Web\VRNS.DataModel\obj\Debug\GenerateResource-cvtres.read.1.tlog
 D:\VRNS_Web\VRNS.DataModel\obj\Debug\GenerateResource-cvtres.write.1.tlog
+D:\Work\vrns\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.dll
+D:\Work\vrns\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.pdb
+D:\Work\vrns\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.xml
+D:\Work\vrns\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.Resources.resources
+D:\Work\vrns\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.vbproj.GenerateResource.Cache
+D:\Work\vrns\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.dll
+D:\Work\vrns\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.xml
+D:\Work\vrns\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.pdb

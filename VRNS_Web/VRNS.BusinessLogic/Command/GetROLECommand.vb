@@ -1,13 +1,12 @@
 ﻿ 
-
 Imports VRNS.BusinessLogic.Framework
 Imports VRNS.DataAccess
 Imports VRNS.DataModel.EntityModel
- 
+
 Namespace Command
 
-    Public Class GetMemberCommand
-        Inherits FrameworkCommand(Of List(Of VRNS_Member))
+    Public Class GetROLECommand
+        Inherits FrameworkCommand(Of List(Of VRNS_ROLE))
         Sub New()
 
         End Sub
@@ -15,8 +14,8 @@ Namespace Command
 
             Dim ctx As New VRNSEntities
 
-            Dim list = ctx.VRNS_Member.Include("VRNS_ROLE").ToList()
-             
+            Dim list = ctx.VRNS_ROLE.ToList()
+
             Result = list.ToList()
         End Sub
 

@@ -88,13 +88,13 @@ Namespace EntityModel
         End Property
         Private _jOB_ID As Nullable(Of Integer)
     
+        Public Overridable Property Status As Nullable(Of Boolean)
+    
         Public Overridable Property LAST_UPD As Nullable(Of Date)
     
         Public Overridable Property LAST_UPD_LOGIN As String
     
         Public Overridable Property LAST_UPD_DISPLAY_NM As String
-    
-        Public Overridable Property Status As Nullable(Of Boolean)
 
         #End Region
         #Region "Navigation Properties"

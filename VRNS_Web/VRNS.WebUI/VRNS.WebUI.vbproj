@@ -283,6 +283,7 @@
     <Content Include="Master\TeamMA.aspx" />
     <Content Include="Master\TitleMA.aspx" />
     <Content Include="Master\TopicMA.aspx" />
+    <Content Include="Profiles.aspx" />
     <Content Include="Scripts\CommonScript.js" />
     <Content Include="Scripts\jquery.watermark.js" />
     <Content Include="Scripts\jquery\jquery-1.9.0.js" />
@@ -417,6 +418,9 @@
       <DependentUpon>DownTimeStatistics.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Handle\GetProfileIcon.ashx.vb">
+      <DependentUpon>GetProfileIcon.ashx</DependentUpon>
+    </Compile>
     <Compile Include="ListOfflineBranch.aspx.designer.vb">
       <DependentUpon>ListOfflineBranch.aspx</DependentUpon>
     </Compile>
@@ -513,6 +517,13 @@
       <DependentUpon>ListOnlineBranch.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Profiles.aspx.designer.vb">
+      <DependentUpon>Profiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profiles.aspx.vb">
+      <DependentUpon>Profiles.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="SessionTimeout.aspx.designer.vb">
       <DependentUpon>SessionTimeout.aspx</DependentUpon>
     </Compile>
@@ -558,6 +569,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Handle\GetProfileIcon.ashx" />
     <None Include="Images\ceo\Thumbs.db" />
     <None Include="Images\common\Thumbs.db" />
     <None Include="Images\documents\Thumbs.db" />

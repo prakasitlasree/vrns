@@ -51,6 +51,8 @@ Namespace EntityModel
     
         Public Overridable Property Cur_Status_UPD As Nullable(Of Date)
     
+        Public Overridable Property Cur_Status_F As Nullable(Of Boolean)
+    
         Public Overridable Property Prev_Status_CODE As Nullable(Of Integer)
     
         Public Overridable Property Prev_Status_UPD As Nullable(Of Date)
@@ -60,8 +62,6 @@ Namespace EntityModel
         Public Overridable Property LAST_UPD_LOGIN As String
     
         Public Overridable Property LAST_UPD_DISPLAY_NM As String
-    
-        Public Overridable Property Cur_Status_F As Nullable(Of Boolean)
 
         #End Region
         #Region "Navigation Properties"

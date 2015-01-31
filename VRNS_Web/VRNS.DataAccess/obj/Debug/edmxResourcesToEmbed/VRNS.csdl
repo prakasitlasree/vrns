@@ -1,10 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="VRNSModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
   <EntityContainer Name="VRNSEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="GETTOP10_DOWNTIME" ReturnType="Collection(VRNSModel.GET_TOP10_DOWN_Result)" />
     <EntitySet Name="VRNS_Branch" EntityType="VRNSModel.VRNS_Branch" />
     <EntitySet Name="VRNS_Department" EntityType="VRNSModel.VRNS_Department" />
     <EntitySet Name="VRNS_Device_Registered" EntityType="VRNSModel.VRNS_Device_Registered" />
     <EntitySet Name="VRNS_Employee" EntityType="VRNSModel.VRNS_Employee" />
+    <EntitySet Name="VRNS_JOB" EntityType="VRNSModel.VRNS_JOB" />
+    <EntitySet Name="VRNS_MA_Team" EntityType="VRNSModel.VRNS_MA_Team" />
+    <EntitySet Name="VRNS_MA_Topic" EntityType="VRNSModel.VRNS_MA_Topic" />
+    <EntitySet Name="VRNS_Maintainance_Detail" EntityType="VRNSModel.VRNS_Maintainance_Detail" />
+    <EntitySet Name="VRNS_Maintainance_Record" EntityType="VRNSModel.VRNS_Maintainance_Record" />
+    <EntitySet Name="VRNS_Member" EntityType="VRNSModel.VRNS_Member" />
+    <EntitySet Name="VRNS_ROLE" EntityType="VRNSModel.VRNS_ROLE" />
     <EntitySet Name="VRNS_Status" EntityType="VRNSModel.VRNS_Status" />
     <EntitySet Name="VRNS_Title" EntityType="VRNSModel.VRNS_Title" />
     <AssociationSet Name="FK_VRNS_Employee_VRNS_Employee" Association="VRNSModel.FK_VRNS_Employee_VRNS_Employee">
@@ -19,15 +27,14 @@
       <End Role="VRNS_Status" EntitySet="VRNS_Status" />
       <End Role="VRNS_Device_Registered" EntitySet="VRNS_Device_Registered" />
     </AssociationSet>
+    <AssociationSet Name="FK_VRNS_Maintainance_Record_VRNS_Device_Registered" Association="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Device_Registered">
+      <End Role="VRNS_Device_Registered" EntitySet="VRNS_Device_Registered" />
+      <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
+    </AssociationSet>
     <AssociationSet Name="FK_VRNS_Employee_VRNS_Title" Association="VRNSModel.FK_VRNS_Employee_VRNS_Title">
       <End Role="VRNS_Title" EntitySet="VRNS_Title" />
       <End Role="VRNS_Employee" EntitySet="VRNS_Employee" />
     </AssociationSet>
-    <EntitySet Name="VRNS_Member" EntityType="VRNSModel.VRNS_Member" />
-    <EntitySet Name="VRNS_JOB" EntityType="VRNSModel.VRNS_JOB" />
-    <EntitySet Name="VRNS_MA_Team" EntityType="VRNSModel.VRNS_MA_Team" />
-    <EntitySet Name="VRNS_MA_Topic" EntityType="VRNSModel.VRNS_MA_Topic" />
-    <EntitySet Name="VRNS_Maintainance_Detail" EntityType="VRNSModel.VRNS_Maintainance_Detail" />
     <AssociationSet Name="FK_VRNS_MA_Team_VRNS_Employee" Association="VRNSModel.FK_VRNS_MA_Team_VRNS_Employee">
       <End Role="VRNS_Employee" EntitySet="VRNS_Employee" />
       <End Role="VRNS_MA_Team" EntitySet="VRNS_MA_Team" />
@@ -35,15 +42,6 @@
     <AssociationSet Name="FK_VRNS_Maintainance_Detail_VRNS_Employee" Association="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_Employee">
       <End Role="VRNS_Employee" EntitySet="VRNS_Employee" />
       <End Role="VRNS_Maintainance_Detail" EntitySet="VRNS_Maintainance_Detail" />
-    </AssociationSet>
-    <AssociationSet Name="FK_VRNS_Maintainance_Detail_VRNS_MA_Team" Association="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_MA_Team">
-      <End Role="VRNS_MA_Team" EntitySet="VRNS_MA_Team" />
-      <End Role="VRNS_Maintainance_Detail" EntitySet="VRNS_Maintainance_Detail" />
-    </AssociationSet>
-    <EntitySet Name="VRNS_Maintainance_Record" EntityType="VRNSModel.VRNS_Maintainance_Record" />
-    <AssociationSet Name="FK_VRNS_Maintainance_Record_VRNS_Device_Registered" Association="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Device_Registered">
-      <End Role="VRNS_Device_Registered" EntitySet="VRNS_Device_Registered" />
-      <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
     </AssociationSet>
     <AssociationSet Name="FK_VRNS_Maintainance_Record_VRNS_JOB" Association="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_JOB">
       <End Role="VRNS_JOB" EntitySet="VRNS_JOB" />
@@ -53,6 +51,10 @@
       <End Role="VRNS_JOB" EntitySet="VRNS_JOB" />
       <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
     </AssociationSet>
+    <AssociationSet Name="FK_VRNS_Maintainance_Detail_VRNS_MA_Team" Association="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_MA_Team">
+      <End Role="VRNS_MA_Team" EntitySet="VRNS_MA_Team" />
+      <End Role="VRNS_Maintainance_Detail" EntitySet="VRNS_Maintainance_Detail" />
+    </AssociationSet>
     <AssociationSet Name="FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC" Association="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC">
       <End Role="VRNS_MA_Topic" EntitySet="VRNS_MA_Topic" />
       <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
@@ -61,8 +63,16 @@
       <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
       <End Role="VRNS_Maintainance_Detail" EntitySet="VRNS_Maintainance_Detail" />
     </AssociationSet>
-    <FunctionImport Name="GETTOP10_DOWNTIME" ReturnType="Collection(VRNSModel.GET_TOP10_DOWN_Result)" />
+    <AssociationSet Name="FK_VRNS_Member_VRNS_ROLE" Association="VRNSModel.FK_VRNS_Member_VRNS_ROLE">
+      <End Role="VRNS_ROLE" EntitySet="VRNS_ROLE" />
+      <End Role="VRNS_Member" EntitySet="VRNS_Member" />
+    </AssociationSet>
   </EntityContainer>
+  <ComplexType Name="GET_TOP10_DOWN_Result">
+    <Property Type="Int64" Name="Dev_Regis_ID" Nullable="false" />
+    <Property Type="String" Name="BRANCH_CODE" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="row" Nullable="true" />
+  </ComplexType>
   <EntityType Name="VRNS_Branch">
     <Key>
       <PropertyRef Name="CODE" />
@@ -100,13 +110,13 @@
     <Property Type="String" Name="ISP" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Type="Int32" Name="Cur_Status_CODE" />
     <Property Type="DateTime" Name="Cur_Status_UPD" />
+    <Property Type="Boolean" Name="Cur_Status_F" />
     <Property Type="Int32" Name="Prev_Status_CODE" />
     <Property Type="DateTime" Name="Prev_Status_UPD" />
     <Property Type="DateTime" Name="LAST_UPD" />
     <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="VRNS_Status" Relationship="VRNSModel.FK_VRNS_Device_Registered_VRNS_Status" FromRole="VRNS_Device_Registered" ToRole="VRNS_Status" />
-    <Property Type="Boolean" Name="Cur_Status_F" />
     <NavigationProperty Name="VRNS_Maintainance_Record" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Device_Registered" FromRole="VRNS_Device_Registered" ToRole="VRNS_Maintainance_Record" />
   </EntityType>
   <EntityType Name="VRNS_Employee">
@@ -131,6 +141,113 @@
     <NavigationProperty Name="VRNS_Title" Relationship="VRNSModel.FK_VRNS_Employee_VRNS_Title" FromRole="VRNS_Employee" ToRole="VRNS_Title" />
     <NavigationProperty Name="VRNS_MA_Team" Relationship="VRNSModel.FK_VRNS_MA_Team_VRNS_Employee" FromRole="VRNS_Employee" ToRole="VRNS_MA_Team" />
     <NavigationProperty Name="VRNS_Maintainance_Detail" Relationship="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_Employee" FromRole="VRNS_Employee" ToRole="VRNS_Maintainance_Detail" />
+  </EntityType>
+  <EntityType Name="VRNS_JOB">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LAST_UPD" />
+    <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="VRNS_Maintainance_Record" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_JOB" FromRole="VRNS_JOB" ToRole="VRNS_Maintainance_Record" />
+    <NavigationProperty Name="VRNS_Maintainance_Record1" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record" FromRole="VRNS_JOB" ToRole="VRNS_Maintainance_Record" />
+  </EntityType>
+  <EntityType Name="VRNS_MA_Team">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="String" Name="EMP_ID" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SKILL" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LAST_UPD" />
+    <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="VRNS_Employee" Relationship="VRNSModel.FK_VRNS_MA_Team_VRNS_Employee" FromRole="VRNS_MA_Team" ToRole="VRNS_Employee" />
+    <NavigationProperty Name="VRNS_Maintainance_Detail" Relationship="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_MA_Team" FromRole="VRNS_MA_Team" ToRole="VRNS_Maintainance_Detail" />
+  </EntityType>
+  <EntityType Name="VRNS_MA_Topic">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Type="String" Name="CODE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NAME" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DESCRIPTION" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LAST_UPD" />
+    <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="VRNS_Maintainance_Record" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC" FromRole="VRNS_MA_Topic" ToRole="VRNS_Maintainance_Record" />
+  </EntityType>
+  <EntityType Name="VRNS_Maintainance_Detail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int64" Name="ID" Nullable="false" />
+    <Property Type="Int64" Name="Maintainance_Record_ID" Nullable="false" />
+    <Property Type="Int64" Name="Dev_Regis_ID" />
+    <Property Type="Int64" Name="EMP_MA" />
+    <Property Type="String" Name="EMP_Contact_ID" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LAST_UPD" />
+    <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="VRNS_Employee" Relationship="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_Employee" FromRole="VRNS_Maintainance_Detail" ToRole="VRNS_Employee" />
+    <NavigationProperty Name="VRNS_MA_Team" Relationship="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_MA_Team" FromRole="VRNS_Maintainance_Detail" ToRole="VRNS_MA_Team" />
+    <NavigationProperty Name="VRNS_Maintainance_Record" Relationship="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_Maintainance_Record" FromRole="VRNS_Maintainance_Detail" ToRole="VRNS_Maintainance_Record" />
+  </EntityType>
+  <EntityType Name="VRNS_Maintainance_Record">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Dev_Regis_ID" />
+    </Key>
+    <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="Dev_Regis_ID" Nullable="false" />
+    <Property Type="String" Name="MA_TOPIC_CODE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ROOT_CAUSE" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SOLUTION" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="ASSIGNEE" />
+    <Property Type="Int32" Name="JOB_ID" />
+    <Property Type="Boolean" Name="Status" />
+    <Property Type="DateTime" Name="LAST_UPD" />
+    <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="VRNS_Device_Registered" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Device_Registered" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_Device_Registered" />
+    <NavigationProperty Name="VRNS_JOB" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_JOB" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_JOB" />
+    <NavigationProperty Name="VRNS_JOB1" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_JOB" />
+    <NavigationProperty Name="VRNS_MA_Topic" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_MA_Topic" />
+    <NavigationProperty Name="VRNS_Maintainance_Detail" Relationship="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_Maintainance_Record" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_Maintainance_Detail" />
+  </EntityType>
+  <EntityType Name="VRNS_Member">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="USER_LOGIN" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="USER_PASSWORD" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DISPLAY_NAME" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ROLE_ID" />
+    <Property Type="String" Name="EMAIL" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MOBILE_TEL" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="HOME_TEL" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="PHOTO" MaxLength="Max" FixedLength="false" />
+    <Property Type="String" Name="PHOTO_TYPE" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LAST_UPD" />
+    <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="VRNS_ROLE" Relationship="VRNSModel.FK_VRNS_Member_VRNS_ROLE" FromRole="VRNS_Member" ToRole="VRNS_ROLE" />
+  </EntityType>
+  <EntityType Name="VRNS_ROLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="CODE" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DESCRIPTION" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LAST_UPD" />
+    <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="VRNS_Member" Relationship="VRNSModel.FK_VRNS_Member_VRNS_ROLE" FromRole="VRNS_ROLE" ToRole="VRNS_Member" />
   </EntityType>
   <EntityType Name="VRNS_Status">
     <Key>
@@ -191,6 +308,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_VRNS_Maintainance_Record_VRNS_Device_Registered">
+    <End Type="VRNSModel.VRNS_Device_Registered" Role="VRNS_Device_Registered" Multiplicity="1" />
+    <End Type="VRNSModel.VRNS_Maintainance_Record" Role="VRNS_Maintainance_Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VRNS_Device_Registered">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VRNS_Maintainance_Record">
+        <PropertyRef Name="Dev_Regis_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_VRNS_Employee_VRNS_Title">
     <End Type="VRNSModel.VRNS_Title" Role="VRNS_Title" Multiplicity="0..1" />
     <End Type="VRNSModel.VRNS_Employee" Role="VRNS_Employee" Multiplicity="*" />
@@ -203,74 +332,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="VRNS_Member">
-    <Key>
-      <PropertyRef Name="ID" />
-      <PropertyRef Name="USER_NAME" />
-    </Key>
-    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="USER_LOGIN" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="USER_NAME" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="USER_PASSWORD" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="ROLE" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="DateTime" Name="LAST_UPD" />
-    <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="50" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="VRNS_JOB">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="CODE" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="Description" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Type="DateTime" Name="LAST_UPD" />
-    <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="VRNS_Maintainance_Record" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_JOB" FromRole="VRNS_JOB" ToRole="VRNS_Maintainance_Record" />
-    <NavigationProperty Name="VRNS_Maintainance_Record1" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record" FromRole="VRNS_JOB" ToRole="VRNS_Maintainance_Record" />
-  </EntityType>
-  <EntityType Name="VRNS_MA_Team">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Type="Int64" Name="ID" Nullable="false" />
-    <Property Type="String" Name="EMP_ID" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="SKILL" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Type="DateTime" Name="LAST_UPD" />
-    <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="VRNS_Employee" Relationship="VRNSModel.FK_VRNS_MA_Team_VRNS_Employee" FromRole="VRNS_MA_Team" ToRole="VRNS_Employee" />
-    <NavigationProperty Name="VRNS_Maintainance_Detail" Relationship="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_MA_Team" FromRole="VRNS_MA_Team" ToRole="VRNS_Maintainance_Detail" />
-  </EntityType>
-  <EntityType Name="VRNS_MA_Topic">
-    <Key>
-      <PropertyRef Name="CODE" />
-    </Key>
-    <Property Type="String" Name="CODE" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="NAME" MaxLength="4000" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="DESCRIPTION" MaxLength="4000" FixedLength="false" Unicode="true" />
-    <Property Type="DateTime" Name="LAST_UPD" />
-    <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="VRNS_Maintainance_Record" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC" FromRole="VRNS_MA_Topic" ToRole="VRNS_Maintainance_Record" />
-  </EntityType>
-  <EntityType Name="VRNS_Maintainance_Detail">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Type="Int64" Name="ID" Nullable="false" />
-    <Property Type="Int64" Name="Maintainance_Record_ID" Nullable="false" />
-    <Property Type="Int64" Name="Dev_Regis_ID" />
-    <Property Type="Int64" Name="EMP_MA" />
-    <Property Type="String" Name="EMP_Contact_ID" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Type="DateTime" Name="LAST_UPD" />
-    <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="VRNS_Employee" Relationship="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_Employee" FromRole="VRNS_Maintainance_Detail" ToRole="VRNS_Employee" />
-    <NavigationProperty Name="VRNS_MA_Team" Relationship="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_MA_Team" FromRole="VRNS_Maintainance_Detail" ToRole="VRNS_MA_Team" />
-    <NavigationProperty Name="VRNS_Maintainance_Record" Relationship="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_Maintainance_Record" FromRole="VRNS_Maintainance_Detail" ToRole="VRNS_Maintainance_Record" />
-  </EntityType>
   <Association Name="FK_VRNS_MA_Team_VRNS_Employee">
     <End Type="VRNSModel.VRNS_Employee" Role="VRNS_Employee" Multiplicity="0..1" />
     <End Type="VRNSModel.VRNS_MA_Team" Role="VRNS_MA_Team" Multiplicity="*" />
@@ -295,52 +356,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_VRNS_Maintainance_Detail_VRNS_MA_Team">
-    <End Type="VRNSModel.VRNS_MA_Team" Role="VRNS_MA_Team" Multiplicity="0..1" />
-    <End Type="VRNSModel.VRNS_Maintainance_Detail" Role="VRNS_Maintainance_Detail" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="VRNS_MA_Team">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="VRNS_Maintainance_Detail">
-        <PropertyRef Name="EMP_MA" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityType Name="VRNS_Maintainance_Record">
-    <Key>
-      <PropertyRef Name="ID" />
-      <PropertyRef Name="Dev_Regis_ID" />
-    </Key>
-    <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int64" Name="Dev_Regis_ID" Nullable="false" />
-    <Property Type="String" Name="MA_TOPIC_CODE" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="ROOT_CAUSE" MaxLength="4000" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="SOLUTION" MaxLength="4000" FixedLength="false" Unicode="true" />
-    <Property Type="Int64" Name="ASSIGNEE" />
-    <Property Type="Int32" Name="JOB_ID" />
-    <Property Type="DateTime" Name="LAST_UPD" />
-    <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="VRNS_Device_Registered" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Device_Registered" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_Device_Registered" />
-    <NavigationProperty Name="VRNS_JOB" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_JOB" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_JOB" />
-    <NavigationProperty Name="VRNS_JOB1" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_JOB" />
-    <NavigationProperty Name="VRNS_MA_Topic" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_MA_Topic" />
-    <NavigationProperty Name="VRNS_Maintainance_Detail" Relationship="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_Maintainance_Record" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_Maintainance_Detail" />
-    <Property Type="Boolean" Name="Status" />
-  </EntityType>
-  <Association Name="FK_VRNS_Maintainance_Record_VRNS_Device_Registered">
-    <End Type="VRNSModel.VRNS_Device_Registered" Role="VRNS_Device_Registered" Multiplicity="1" />
-    <End Type="VRNSModel.VRNS_Maintainance_Record" Role="VRNS_Maintainance_Record" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="VRNS_Device_Registered">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="VRNS_Maintainance_Record">
-        <PropertyRef Name="Dev_Regis_ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_VRNS_Maintainance_Record_VRNS_JOB">
     <End Type="VRNSModel.VRNS_JOB" Role="VRNS_JOB" Multiplicity="0..1" />
     <End Type="VRNSModel.VRNS_Maintainance_Record" Role="VRNS_Maintainance_Record" Multiplicity="*" />
@@ -362,6 +377,18 @@
       </Principal>
       <Dependent Role="VRNS_Maintainance_Record">
         <PropertyRef Name="JOB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VRNS_Maintainance_Detail_VRNS_MA_Team">
+    <End Type="VRNSModel.VRNS_MA_Team" Role="VRNS_MA_Team" Multiplicity="0..1" />
+    <End Type="VRNSModel.VRNS_Maintainance_Detail" Role="VRNS_Maintainance_Detail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VRNS_MA_Team">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VRNS_Maintainance_Detail">
+        <PropertyRef Name="EMP_MA" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -391,9 +418,16 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <ComplexType Name="GET_TOP10_DOWN_Result">
-    <Property Type="Int64" Name="Dev_Regis_ID" Nullable="false" />
-    <Property Type="String" Name="BRANCH_CODE" Nullable="true" MaxLength="30" />
-    <Property Type="Int32" Name="row" Nullable="true" />
-  </ComplexType>
+  <Association Name="FK_VRNS_Member_VRNS_ROLE">
+    <End Type="VRNSModel.VRNS_ROLE" Role="VRNS_ROLE" Multiplicity="0..1" />
+    <End Type="VRNSModel.VRNS_Member" Role="VRNS_Member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VRNS_ROLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VRNS_Member">
+        <PropertyRef Name="ROLE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

@@ -34,7 +34,11 @@ input, select, option, textarea, fieldset
     background: url(../images/site/wrapper_bg-grey.png) #d2d1d0 repeat-x 0px 0px;
     min-width: 1024;
 }
-
+#warplogin
+{
+     padding-top: 120px;
+     padding-bottom: 120px;
+}
 .container
 {
     width: 1024px;
@@ -49,7 +53,7 @@ div.centercontentpage
     margin-left: 5px;
     margin-right: 5px;
     min-height: 300px;
-    padding-bottom: 30px;
+    padding-bottom: 7px;
 }
 
 div.centerdiv
@@ -176,7 +180,7 @@ div.workingarea-wrapper
 {
      
     width: auto;
-    height: 25px;
+    height: 30px;
     background-color: #fff;
     margin: 0px;
     padding: 0px;
@@ -187,7 +191,7 @@ div.workingarea-wrapper
 .navbar
 {
     float: left;
-    padding: 3px 0px 0px 5px;
+    padding: 7px 0px 0px 5px;
     width: 700px;
     white-space:nowrap;
 }
@@ -359,7 +363,7 @@ div.customtab input.selected
 /*form and input*/
 input[type='text'], textarea
 {
-    border: 1px solid #000000;
+    border: 1px solid #333;
     color: #333;
 }
 
