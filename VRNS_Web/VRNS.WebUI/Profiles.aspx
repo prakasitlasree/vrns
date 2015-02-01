@@ -27,6 +27,7 @@
                                 &nbsp;
                                 <div style=" padding-left: 10px; width:100px; float:left;"><asp:ImageButton ID="cmdNew" runat="server" ImageUrl="../images/tools/new.png" AlternateText="Upload"
                                     ToolTip="Upload" />
+                                    &nbsp;Upload
                                     </div>
                                 <br /> <br />
                                 <br />

@@ -14,13 +14,85 @@ Option Explicit On
 Partial Public Class WelcomePage
 
     '''<summary>
-    '''LeftMenu1 control.
+    '''dvTech control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents LeftMenu1 As Global.VRNS.WebUI.LeftMenu
+    Protected WithEvents dvTech As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''LeftMenuTechnical1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents LeftMenuTechnical1 As Global.VRNS.WebUI.LeftMenuTechnical
+
+    '''<summary>
+    '''dvEng control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dvEng As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''LeftMenuEngineer1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents LeftMenuEngineer1 As Global.VRNS.WebUI.LeftMenuEngineer
+
+    '''<summary>
+    '''dvDoc control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dvDoc As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''LeftMenuDocument1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents LeftMenuDocument1 As Global.VRNS.WebUI.LeftMenuDocument
+
+    '''<summary>
+    '''North control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents North As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
+    '''LinkButtonNorth control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents LinkButtonNorth As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''dvNorth control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dvNorth As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''ddlStatus control.
@@ -57,6 +129,87 @@ Partial Public Class WelcomePage
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents gridData As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''imgEast control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgEast As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
+    '''LinkButtonEast control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents LinkButtonEast As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''dvEast control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dvEast As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''ImageSouth control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ImageSouth As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
+    '''LinkButtonSouth control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents LinkButtonSouth As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''dvSouth control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dvSouth As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''ImageWest control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ImageWest As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
+    '''LinkButtonWest control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents LinkButtonWest As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''dvWest control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dvWest As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''lnkFake control.

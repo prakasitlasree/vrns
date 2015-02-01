@@ -26,7 +26,18 @@ Public Class GetProfileIcon
 
             context.Response.End()
         Else
+            Dim def = cmd.Result().Where(Function(x) x.USER_LOGIN = "default").FirstOrDefault()
+            context.Response.ContentType = def.PHOTO_TYPE
+            Dim bytes() As Byte = def.PHOTO
+            context.Response.Buffer = True
+            context.Response.Charset = ""
+            context.Response.Cache.SetCacheability(HttpCacheability.NoCache)
+            context.Response.ContentType = def.PHOTO_TYPE
+            context.Response.AddHeader("content-disposition", _
+                "attachment;filename=photo")
+            context.Response.BinaryWrite(bytes)
 
+            context.Response.End()
         End If
 
     End Sub

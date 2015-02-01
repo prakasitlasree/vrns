@@ -3,30 +3,6 @@ Imports VRNS.BusinessLogic.Command
 
 Public Class Profiles
     Inherits BaseWebPage
-
-    Private _phototype As String
-    Public Property Phototype() As String
-        Get
-            Dim d As String = ViewState("phototype")
-            Return d
-        End Get
-        Set(ByVal value As String)
-            _phototype = value
-            ViewState("phototype") = _phototype
-        End Set
-    End Property
-     
-    Private _photo As Byte()
-    Public Property Photo() As Byte()
-        Get
-            Dim d As Byte() = ViewState("photo")
-            Return d
-        End Get
-        Set(ByVal value As Byte())
-            _photo = value
-            ViewState("photo") = _photo
-        End Set
-    End Property
      
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
@@ -86,6 +62,32 @@ Public Class Profiles
         Next
 
     End Sub
+
+    Private _phototype As String
+    Public Property Phototype() As String
+        Get
+            Dim d As String = ViewState("phototype")
+            Return d
+        End Get
+        Set(ByVal value As String)
+            _phototype = value
+            ViewState("phototype") = _phototype
+        End Set
+    End Property
+
+    Private _photo As Byte()
+    Public Property Photo() As Byte()
+        Get
+            Dim d As Byte() = ViewState("photo")
+            Return d
+        End Get
+        Set(ByVal value As Byte())
+            _photo = value
+            ViewState("photo") = _photo
+        End Set
+    End Property
+
+
     Protected Sub btnEditConfirm_Click(sender As Object, e As EventArgs) Handles btnEditConfirm.Click
       
         If FileUploadDoc.HasFile Then
