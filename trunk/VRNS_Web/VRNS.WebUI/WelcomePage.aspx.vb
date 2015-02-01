@@ -8,9 +8,9 @@ Public Class WelcomePage
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         If Not Page.IsPostBack Then
-
+            dvNorth.Visible = False
             If Session("login") IsNot Nothing Then
-                initialDataLoad()
+                initialLeftMenu()
             Else
                 Response.Redirect("AccessDeniedPage.aspx")
             End If
@@ -59,6 +59,29 @@ Public Class WelcomePage
         refreshGrid()
     End Sub
 
+    Private Sub initialLeftMenu()
+        Dim user As VRNS_Member = Session("login")
+        If user IsNot Nothing Then
+            Dim role = user.VRNS_ROLE.CODE
+            If role = "Technical" Then
+                initialDataLoad()
+                dvDoc.Visible = False
+                dvEng.Visible = False
+                dvTech.Visible = True
+            ElseIf role = "Engineer" Then
+                dvDoc.Visible = False
+                dvEng.Visible = True
+                dvTech.Visible = False
+            ElseIf role = "Document" Then
+                dvDoc.Visible = True
+                dvEng.Visible = False
+                dvTech.Visible = False
+            End If
+
+        End If
+
+    End Sub
+
     Private Sub refreshGrid()
         gridData.DataSource = Me.DataSource
         gridData.DataBind()
@@ -99,14 +122,14 @@ Public Class WelcomePage
             gridData.DataBind()
         End If
 
-       
+
 
     End Sub
 
     'Protected Sub cmdNew_Click(sender As Object, e As System.Web.UI.ImageClickEventArgs) Handles cmdNew.Click
     '    popup.Show()
     'End Sub
-  
+
     Protected Sub gridData_PageIndexChanging(sender As Object, e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles gridData.PageIndexChanging
         Dim ds = Me.DataSource.Where(Function(x) x.Cur_Status_CODE = ddlStatus.SelectedValue).ToList()
         If ddlStatus.SelectedIndex = 0 Then
@@ -118,7 +141,7 @@ Public Class WelcomePage
         gridData.DataBind()
     End Sub
 
-   
+
     Protected Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
 
         If txt_search.Text <> String.Empty Then
@@ -167,10 +190,44 @@ Public Class WelcomePage
             cmd.Execute()
 
         End If
-         
+
         Me.ShowSaveSuccessRedirect()
-        
+
     End Sub
 
 
+    Protected Sub North_Click(sender As Object, e As System.Web.UI.ImageClickEventArgs) Handles North.Click
+        If dvNorth.Visible = True Then
+            dvNorth.Visible = False
+        Else
+            dvNorth.Visible = True
+        End If
+    End Sub
+
+    Protected Sub LinkButtonNorth_Click(sender As Object, e As EventArgs) Handles LinkButtonNorth.Click
+
+        If dvNorth.Visible = True Then
+            dvNorth.Visible = False
+        Else
+            dvNorth.Visible = True
+        End If
+
+    End Sub
+
+
+    Protected Sub LinkButtonEast_Click(sender As Object, e As EventArgs) Handles LinkButtonEast.Click
+        If dvEast.Visible = True Then
+            dvEast.Visible = False
+        Else
+            dvEast.Visible = True
+        End If
+    End Sub
+
+    Protected Sub imgEast_Click(sender As Object, e As System.Web.UI.ImageClickEventArgs) Handles imgEast.Click
+        If dvEast.Visible = True Then
+            dvEast.Visible = False
+        Else
+            dvEast.Visible = True
+        End If
+    End Sub
 End Class
