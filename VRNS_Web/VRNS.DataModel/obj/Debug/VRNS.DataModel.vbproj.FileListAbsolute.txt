@@ -1,85 +1,9 @@
-C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.DataModel\bin\Debug\VRNS.DataModel.dll
-C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.DataModel\bin\Debug\VRNS.DataModel.pdb
-C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.DataModel\bin\Debug\VRNS.DataModel.xml
-C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.DataModel\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.DataModel\obj\Debug\VRNS.DataModel.Resources.resources
-C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.DataModel\obj\Debug\GenerateResource.read.1.tlog
-C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.DataModel\obj\Debug\GenerateResource.write.1.tlog
-C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.DataModel\obj\Debug\VRNS.DataModel.dll
-C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.DataModel\obj\Debug\VRNS.DataModel.xml
-C:\Documents and Settings\dmscoref\My Documents\Visual Studio 2010\Projects\VRNS\VRNS.DataModel\obj\Debug\VRNS.DataModel.pdb
-C:\Users\Prakasit\Google Drive\VRNS\VRNS.DataModel\bin\Debug\VRNS.DataModel.dll
-C:\Users\Prakasit\Google Drive\VRNS\VRNS.DataModel\bin\Debug\VRNS.DataModel.pdb
-C:\Users\Prakasit\Google Drive\VRNS\VRNS.DataModel\bin\Debug\VRNS.DataModel.xml
-C:\Users\Prakasit\Google Drive\VRNS\VRNS.DataModel\obj\Debug\VRNS.DataModel.Resources.resources
-C:\Users\Prakasit\Google Drive\VRNS\VRNS.DataModel\obj\Debug\VRNS.DataModel.vbproj.GenerateResource.Cache
-C:\Users\Prakasit\Google Drive\VRNS\VRNS.DataModel\obj\Debug\VRNS.DataModel.dll
-C:\Users\Prakasit\Google Drive\VRNS\VRNS.DataModel\obj\Debug\VRNS.DataModel.xml
-C:\Users\Prakasit\Google Drive\VRNS\VRNS.DataModel\obj\Debug\VRNS.DataModel.pdb
-C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.DataModel\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.DataModel\obj\Debug\VRNS.DataModel.Resources.resources
-C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.DataModel\obj\Debug\GenerateResource.read.1.tlog
-C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.DataModel\obj\Debug\GenerateResource.write.1.tlog
-C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.DataModel\obj\Debug\VRNS.DataModel.dll
-C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.DataModel\obj\Debug\VRNS.DataModel.xml
-C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.DataModel\obj\Debug\VRNS.DataModel.pdb
-C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.DataModel\bin\Debug\VRNS.DataModel.dll
-C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.DataModel\bin\Debug\VRNS.DataModel.pdb
-C:\Documents and Settings\prakasil\Desktop\VRNS\VRNS.DataModel\bin\Debug\VRNS.DataModel.xml
-F:\IS Project KMITL\VRNS_New\VRNS.DataModel\bin\Debug\VRNS.DataModel.dll
-F:\IS Project KMITL\VRNS_New\VRNS.DataModel\bin\Debug\VRNS.DataModel.pdb
-F:\IS Project KMITL\VRNS_New\VRNS.DataModel\bin\Debug\VRNS.DataModel.xml
-F:\IS Project KMITL\VRNS_New\VRNS.DataModel\obj\Debug\VRNS.DataModel.Resources.resources
-F:\IS Project KMITL\VRNS_New\VRNS.DataModel\obj\Debug\VRNS.DataModel.vbproj.GenerateResource.Cache
-F:\IS Project KMITL\VRNS_New\VRNS.DataModel\obj\Debug\VRNS.DataModel.dll
-F:\IS Project KMITL\VRNS_New\VRNS.DataModel\obj\Debug\VRNS.DataModel.xml
-F:\IS Project KMITL\VRNS_New\VRNS.DataModel\obj\Debug\VRNS.DataModel.pdb
-E:\IS Project KMITL\VRNS_New\VRNS.DataModel\bin\Debug\VRNS.DataModel.dll
-E:\IS Project KMITL\VRNS_New\VRNS.DataModel\bin\Debug\VRNS.DataModel.pdb
-E:\IS Project KMITL\VRNS_New\VRNS.DataModel\bin\Debug\VRNS.DataModel.xml
-E:\IS Project KMITL\VRNS_New\VRNS.DataModel\obj\Debug\ResolveAssemblyReference.cache
-E:\IS Project KMITL\VRNS_New\VRNS.DataModel\obj\Debug\VRNS.DataModel.Resources.resources
-E:\IS Project KMITL\VRNS_New\VRNS.DataModel\obj\Debug\GenerateResource.read.1.tlog
-E:\IS Project KMITL\VRNS_New\VRNS.DataModel\obj\Debug\GenerateResource.write.1.tlog
-E:\IS Project KMITL\VRNS_New\VRNS.DataModel\obj\Debug\VRNS.DataModel.dll
-E:\IS Project KMITL\VRNS_New\VRNS.DataModel\obj\Debug\VRNS.DataModel.xml
-E:\IS Project KMITL\VRNS_New\VRNS.DataModel\obj\Debug\VRNS.DataModel.pdb
-F:\IS Project KMITL\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.dll
-F:\IS Project KMITL\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.pdb
-F:\IS Project KMITL\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.xml
-F:\IS Project KMITL\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.Resources.resources
-F:\IS Project KMITL\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.vbproj.GenerateResource.Cache
-F:\IS Project KMITL\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.dll
-F:\IS Project KMITL\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.xml
-F:\IS Project KMITL\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.pdb
-D:\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.dll
-D:\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.pdb
-D:\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.xml
-D:\VRNS_Web\VRNS.DataModel\obj\Debug\ResolveAssemblyReference.cache
-D:\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.Resources.resources
-D:\VRNS_Web\VRNS.DataModel\obj\Debug\GenerateResource.read.1.tlog
-D:\VRNS_Web\VRNS.DataModel\obj\Debug\GenerateResource.write.1.tlog
-D:\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.dll
-D:\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.xml
-D:\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.pdb
-D:\VRNS_Web\VRNS.DataModel\obj\Debug\GenerateResource-cvtres.read.1.tlog
-D:\VRNS_Web\VRNS.DataModel\obj\Debug\GenerateResource-cvtres.write.1.tlog
-D:\Work\vrns\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.dll
-D:\Work\vrns\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.pdb
-D:\Work\vrns\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.xml
-D:\Work\vrns\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.Resources.resources
-D:\Work\vrns\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.vbproj.GenerateResource.Cache
-D:\Work\vrns\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.dll
-D:\Work\vrns\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.xml
-D:\Work\vrns\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.pdb
 D:\work\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.dll
 D:\work\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.pdb
 D:\work\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.xml
 D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\ResolveAssemblyReference.cache
 D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.Resources.resources
-D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\GenerateResource-cvtres.read.1.tlog
 D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\GenerateResource.read.1.tlog
-D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\GenerateResource-cvtres.write.1.tlog
 D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\GenerateResource.write.1.tlog
 D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.dll
 D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.xml
