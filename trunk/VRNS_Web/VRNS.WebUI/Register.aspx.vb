@@ -1,17 +1,16 @@
 ﻿Imports VRNS.DataModel.EntityModel
 Imports VRNS.BusinessLogic.Command
-
-Public Class Profiles
+Public Class Register
     Inherits BaseWebPage
-     
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
 
-            If Session("login") IsNot Nothing Then
-                InitialLoad()
-            Else
-                Response.Redirect("AccessDeniedPage.aspx")
-            End If
+            'If Session("login") IsNot Nothing Then
+            '    InitialLoad()
+            'Else
+            '    Response.Redirect("AccessDeniedPage.aspx")
+            'End If
 
         End If
     End Sub
@@ -93,56 +92,57 @@ Public Class Profiles
     End Property
 
 
-    Protected Sub btnEditConfirm_Click(sender As Object, e As EventArgs) Handles btnEditConfirm.Click
-      
+    Protected Sub btnEditConfirm_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnEditConfirm.Click
+
         If FileUploadDoc.HasFile Then
-            Me.photo = FileUploadDoc.FileBytes
+            Me.Photo = FileUploadDoc.FileBytes
             Me.Phototype = FileUploadDoc.PostedFile.ContentType
         End If
     End Sub
 
-    Protected Sub cmdNew_Click(sender As Object, e As System.Web.UI.ImageClickEventArgs) Handles cmdNew.Click
+    Protected Sub cmdNew_Click(ByVal sender As Object, ByVal e As System.Web.UI.ImageClickEventArgs) Handles cmdNew.Click
 
         popup.Show()
     End Sub
 
-    Protected Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
+    Protected Sub Save_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Save.Click
         Dim file As New VRNS_Member()
-         
+
         Dim action As String = Request.QueryString("action")
 
         If action = "self" Then
             action = txtUSER_LOGIN.Text
         End If
 
-            Dim cmd = New GetMemberCommand()
-            cmd.Initialize()
-            cmd.Execute()
-            Dim obj = cmd.Result().Where(Function(x) x.USER_LOGIN = action).FirstOrDefault()
-            If obj IsNot Nothing Then
-                file.Action = ActionEnum.Update
-                file = obj
-                file.PHOTO = Me.Photo
-                file.PHOTO_TYPE = Me.Phototype
-                file.DISPLAY_NAME = txtDISPLAY_NAME.Text
-                file.USER_PASSWORD = txtUSER_PASSWORD.Text
-                file.EMAIL = txtEMAIL.Text
-                file.HOME_TEL = txtHOME_TEL.Text
-                file.MOBILE_TEL = txtMOBILE_TEL.Text
-                file.ROLE_ID = ddlROLE.SelectedValue
-                file.Action = ActionEnum.Update
-            End If
+        Dim cmd = New GetMemberCommand()
+        cmd.Initialize()
+        cmd.Execute()
+        Dim obj = cmd.Result().Where(Function(x) x.USER_LOGIN = action).FirstOrDefault()
+        If obj IsNot Nothing Then
+            file.Action = ActionEnum.Update
+            file = obj
+            file.PHOTO = Me.Photo
+            file.PHOTO_TYPE = Me.Phototype
+            file.DISPLAY_NAME = txtDISPLAY_NAME.Text
+            file.USER_PASSWORD = txtUSER_PASSWORD.Text
+            file.EMAIL = txtEMAIL.Text
+            file.HOME_TEL = txtHOME_TEL.Text
+            file.MOBILE_TEL = txtMOBILE_TEL.Text
+            file.ROLE_ID = ddlROLE.SelectedValue
+            file.Action = ActionEnum.Update
+        End If
 
-            Dim cmdUpload As New MaintainMemberCommand(file)
-            cmdUpload.Initialize()
-            cmdUpload.Execute()
-        
+        Dim cmdUpload As New MaintainMemberCommand(file)
+        cmdUpload.Initialize()
+        cmdUpload.Execute()
+
         Me.ShowSaveSuccessRedirect()
 
 
     End Sub
 
-    Protected Sub Cancle_Click(sender As Object, e As EventArgs) Handles Cancle.Click
+    Protected Sub Cancle_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Cancle.Click
         Response.Redirect("WelcomePage.aspx")
     End Sub
+
 End Class

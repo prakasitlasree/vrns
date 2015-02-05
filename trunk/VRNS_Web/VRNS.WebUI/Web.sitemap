@@ -17,6 +17,10 @@
     </siteMapNode>
     <siteMapNode url="~\Profiles.aspx" title="Manage User Profile"  description="">
     </siteMapNode>
+    <siteMapNode url="~\Register.aspx" title="Register"  description="">
+    </siteMapNode>
+    <siteMapNode url="~\ForgotPassword.aspx" title="ForgotPassword"  description="">
+    </siteMapNode>
 	</siteMapNode>
 
 </siteMap>
