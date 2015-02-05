@@ -106,7 +106,7 @@
                     </div>
                 </div>
                 <asp:LinkButton ID="lnkFake" runat="server"></asp:LinkButton>
-                <asp:Panel ID="pnlEdit" runat="server" CssClass="modalPopup" Style="display: ;" Width="850px"
+                <asp:Panel ID="pnlEdit" runat="server" CssClass="modalPopup" Style="display: none;" Width="850px"
                     BackColor="White">
                     <div class="section-title">
                         <asp:Label ID="lblPopupTitle" runat="server" Text="Add New Member"></asp:Label>

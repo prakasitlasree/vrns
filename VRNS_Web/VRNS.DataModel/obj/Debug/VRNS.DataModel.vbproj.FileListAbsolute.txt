@@ -72,3 +72,15 @@ D:\Work\vrns\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.vbproj.GenerateRes
 D:\Work\vrns\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.dll
 D:\Work\vrns\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.xml
 D:\Work\vrns\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.pdb
+D:\work\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.dll
+D:\work\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.pdb
+D:\work\VRNS_Web\VRNS.DataModel\bin\Debug\VRNS.DataModel.xml
+D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\ResolveAssemblyReference.cache
+D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.Resources.resources
+D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\GenerateResource-cvtres.read.1.tlog
+D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\GenerateResource.read.1.tlog
+D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\GenerateResource-cvtres.write.1.tlog
+D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\GenerateResource.write.1.tlog
+D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.dll
+D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.xml
+D:\work\VRNS_Web\VRNS.DataModel\obj\Debug\VRNS.DataModel.pdb

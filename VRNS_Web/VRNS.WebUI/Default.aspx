@@ -78,6 +78,18 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td>
+                                    &nbsp;</td>
+                                <td align="right" colspan="2">
+                                <br /><br />
+                                    <div align="center" style="color:Blue;">
+                                        <a href="Register.aspx">สมัครเข้าใช้งานระบบ</a>&nbsp;&nbsp;&nbsp; <a href="ForgotPassword.aspx">
+                                        ลืมรหัสผ่าน</a></div>
+                                </td>
+                                <td>
+                                    &nbsp;</td>
+                            </tr>
+                            <tr>
                                 <td colspan="4">
                                     
                                 </td>

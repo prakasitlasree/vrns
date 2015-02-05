@@ -95,6 +95,7 @@
     <Content Include="Default.aspx" />
     <Content Include="DownTimeStatistics.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="ForgotPassword.aspx" />
     <Content Include="Images\ceo\1.jpg" />
     <Content Include="Images\ceo\2.jpg" />
     <Content Include="Images\ceo\3.jpg" />
@@ -284,6 +285,7 @@
     <Content Include="Master\TitleMA.aspx" />
     <Content Include="Master\TopicMA.aspx" />
     <Content Include="Profiles.aspx" />
+    <Content Include="Register.aspx" />
     <Content Include="Scripts\CommonScript.js" />
     <Content Include="Scripts\jquery.watermark.js" />
     <Content Include="Scripts\jquery\jquery-1.9.0.js" />
@@ -421,6 +423,13 @@
       <DependentUpon>DownTimeStatistics.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.vb">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.vb">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Handle\GetProfileIcon.ashx.vb">
       <DependentUpon>GetProfileIcon.ashx</DependentUpon>
     </Compile>
@@ -525,6 +534,13 @@
     </Compile>
     <Compile Include="Profiles.aspx.vb">
       <DependentUpon>Profiles.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="SessionTimeout.aspx.designer.vb">
