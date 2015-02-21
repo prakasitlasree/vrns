@@ -10,7 +10,25 @@ Public Class WelcomePage
         If Not Page.IsPostBack Then
             dvNorth.Visible = False
             If Session("login") IsNot Nothing Then
+
+                
+
                 initialLeftMenu()
+
+                Dim group = Request.QueryString("group")
+                If group <> Nothing AndAlso group = "region" Then
+                    dvsummary.Visible = False
+                    dvNorth.Visible = True
+                    dvEast.Visible = True
+                    dvSouth.Visible = True
+                    dvWest.Visible = True
+                Else
+                    dvsummary.Visible = True
+                    dvNorth.Visible = False
+                    dvEast.Visible = False
+                    dvSouth.Visible = False
+                    dvWest.Visible = False
+                End If
             Else
                 Response.Redirect("AccessDeniedPage.aspx")
             End If
@@ -78,6 +96,7 @@ Public Class WelcomePage
                 dvTech.Visible = False
             End If
 
+            
         End If
 
     End Sub

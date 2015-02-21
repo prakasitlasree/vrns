@@ -376,6 +376,7 @@
     <Content Include="UserControl\LeftMenuEngineer.ascx" />
     <Content Include="UserControl\LeftMenuMasterData.ascx" />
     <Content Include="UserControl\LeftMenuTechnical.ascx" />
+    <Content Include="UserControl\ServerTime.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -589,6 +590,13 @@
     </Compile>
     <Compile Include="UserControl\LeftMenuTechnical.ascx.vb">
       <DependentUpon>LeftMenuTechnical.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ServerTime.ascx.designer.vb">
+      <DependentUpon>ServerTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ServerTime.ascx.vb">
+      <DependentUpon>ServerTime.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WelcomePage.aspx.designer.vb">

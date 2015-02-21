@@ -68,31 +68,22 @@ Partial Public Class WelcomePage
     Protected WithEvents LeftMenuDocument1 As Global.VRNS.WebUI.LeftMenuDocument
 
     '''<summary>
-    '''North control.
+    '''uc_ServerTime control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents North As Global.System.Web.UI.WebControls.ImageButton
+    Protected WithEvents uc_ServerTime As Global.VRNS.WebUI.ServerTime
 
     '''<summary>
-    '''LinkButtonNorth control.
+    '''dvsummary control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents LinkButtonNorth As Global.System.Web.UI.WebControls.LinkButton
-
-    '''<summary>
-    '''dvNorth control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents dvNorth As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents dvsummary As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''ddlStatus control.
@@ -131,6 +122,42 @@ Partial Public Class WelcomePage
     Protected WithEvents gridData As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
+    '''dvNorth control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dvNorth As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''North control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents North As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
+    '''LinkButtonNorth control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents LinkButtonNorth As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''dvEast control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dvEast As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
     '''imgEast control.
     '''</summary>
     '''<remarks>
@@ -149,13 +176,13 @@ Partial Public Class WelcomePage
     Protected WithEvents LinkButtonEast As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''dvEast control.
+    '''dvSouth control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents dvEast As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents dvSouth As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''ImageSouth control.
@@ -176,13 +203,13 @@ Partial Public Class WelcomePage
     Protected WithEvents LinkButtonSouth As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''dvSouth control.
+    '''dvWest control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents dvSouth As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents dvWest As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''ImageWest control.
@@ -201,15 +228,6 @@ Partial Public Class WelcomePage
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents LinkButtonWest As Global.System.Web.UI.WebControls.LinkButton
-
-    '''<summary>
-    '''dvWest control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents dvWest As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''lnkFake control.

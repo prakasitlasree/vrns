@@ -7,6 +7,7 @@
     TagPrefix="uc2" %>
 <%@ Register Src="UserControl/LeftMenuEngineer.ascx" TagName="LeftMenuEngineer" TagPrefix="uc3" %>
 <%@ Register Src="UserControl/LeftMenuDocument.ascx" TagName="LeftMenuDocument" TagPrefix="uc4" %>
+<%@ Register Src="UserControl/ServerTime.ascx" TagName="ServerTime" TagPrefix="uc5" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
@@ -32,15 +33,15 @@
                                             <uc4:LeftMenuDocument ID="LeftMenuDocument1" runat="server" />
                                         </div>
                                     </div>
+                                    <div style="padding-top: 5px; margin-left: -40px;">
+                                        <uc5:ServerTime ID="uc_ServerTime" runat="server" />
+                                    </div>
                                 </td>
                                 <td width="80%">
-                                    <div style="padding-top: 5px;" align="center">
-                                        <div style="border: 2px dotted #C0C0C0; padding-left: 10px;  padding-top: 10px;" align="left">
-                                            <asp:ImageButton ID="North" runat="server" ImageUrl="~/Images/tools/left-pane-hide.png" />
-                                            &nbsp;<asp:LinkButton ID="LinkButtonNorth" runat="server">Group North</asp:LinkButton>
-                                            &nbsp; 
-                                            <div id="dvNorth" runat="server" style="padding-top: 5px;" align="center">
-                                                <div style="padding-left: 10px;" align="left">
+                                    <div id="dvsummary" runat="server" style="padding-top: 5px;" align="center">
+                                        <div style="border: 2px dotted #C0C0C0; padding-left: 10px; padding-top: 10px;" align="left">
+
+                                        <div style="padding-left: 10px;" align="left">
                                                     <asp:DropDownList ID="ddlStatus" runat="server" Width="300px" AutoPostBack="True">
                                                     </asp:DropDownList>
                                                     &nbsp;ค้นหาจากรหัสสาขา :
@@ -124,45 +125,47 @@
                                                     </asp:GridView>
                                                     <br />
                                                 </div>
-                                                <%--   </ContentTemplate>
-    </asp:UpdatePanel>--%>
-                                                <br />
-                                                <%--   </ContentTemplate>
-    </asp:UpdatePanel>--%>
-                                                <br />
+                                        </div>
+                                    </div>
+                                    <div  id="dvNorth" runat="server"  style="padding-top: 5px;" align="center">
+                                        <div style="border: 2px dotted #C0C0C0; padding-left: 10px; padding-top: 10px;" align="left">
+                                            <asp:ImageButton ID="North" runat="server" ImageUrl="~/Images/tools/left-pane-hide.png" />
+                                            &nbsp;<asp:LinkButton ID="LinkButtonNorth" runat="server">Group North</asp:LinkButton>
+                                            &nbsp;
+                                            <div style="padding-top: 5px;" align="center">
+                                                
+                                               
                                             </div>
                                         </div>
                                     </div>
-                                    <div style="padding-top: 5px;" align="center">
-                                        <div style="border: 2px dotted #C0C0C0; padding-left: 10px;  padding-top: 10px;" align="left">
+                                    <div id="dvEast" runat="server"  style="padding-top: 5px;" align="center">
+                                        <div style="border: 2px dotted #C0C0C0; padding-left: 10px; padding-top: 10px;" align="left">
                                             <asp:ImageButton ID="imgEast" runat="server" ImageUrl="~/Images/tools/left-pane-hide.png" />
                                             &nbsp;<asp:LinkButton ID="LinkButtonEast" runat="server">Group East</asp:LinkButton>
-                                            &nbsp; 
-                                            <div id="dvEast" runat="server" style="padding-top: 5px;" align="center">
+                                            &nbsp;
+                                            <div style="padding-top: 5px;" align="center">
                                                 <div style="padding-left: 10px;" align="left">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div style="padding-top: 5px;" align="center">
-                                        <div style="border: 2px dotted #C0C0C0; padding-left: 10px;  padding-top: 10px;" align="left">
+                                    <div  id="dvSouth" runat="server" style="padding-top: 5px;" align="center">
+                                        <div style="border: 2px dotted #C0C0C0; padding-left: 10px; padding-top: 10px;" align="left">
                                             <asp:ImageButton ID="ImageSouth" runat="server" ImageUrl="~/Images/tools/left-pane-hide.png" />
                                             &nbsp;<asp:LinkButton ID="LinkButtonSouth" runat="server">Group South</asp:LinkButton>
-                                            &nbsp; 
-                                            <div id="dvSouth" runat="server" style="padding-top: 5px;" align="center">
+                                            &nbsp;
+                                            <div style="padding-top: 5px;" align="center">
                                                 <div style="padding-left: 10px;" align="left">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div style="padding-top: 5px;" align="center">
-                                        <div style="border: 2px dotted #C0C0C0; padding-left: 10px; padding-top: 10px;" 
-                                            align="left">
+                                    <div id="dvWest" runat="server"  style="padding-top: 5px;" align="center">
+                                        <div style="border: 2px dotted #C0C0C0; padding-left: 10px; padding-top: 10px;" align="left">
                                             <asp:ImageButton ID="ImageWest" runat="server" ImageUrl="~/Images/tools/left-pane-hide.png" />
                                             &nbsp;<asp:LinkButton ID="LinkButtonWest" runat="server">Group West</asp:LinkButton>
-                                            &nbsp; 
-                                            <div id="dvWest" runat="server" style="padding-top: 5px;" align="center">
+                                            &nbsp;
+                                            <div style="padding-top: 5px;" align="center">
                                                 <div style="padding-left: 10px;" align="left">
                                                 </div>
                                             </div>
@@ -184,8 +187,8 @@
                     </div>
                 </div>
                 <asp:LinkButton ID="lnkFake" runat="server"></asp:LinkButton>
-                <asp:Panel ID="pnlEdit" runat="server" CssClass="modalPopup" Style="display:none ;" Width="850px"
-                    BackColor="White">
+                <asp:Panel ID="pnlEdit" runat="server" CssClass="modalPopup" Style="display: none;"
+                    Width="850px" BackColor="White">
                     <div class="section-title">
                         <asp:Label ID="lblPopupTitle" runat="server" Text="Open Maintainance Job"></asp:Label>
                     </div>
