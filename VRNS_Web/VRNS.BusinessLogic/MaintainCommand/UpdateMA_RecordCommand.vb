@@ -27,7 +27,7 @@ Namespace Command
 
                         If objupd IsNot Nothing Then
                             objupd.SOLUTION = o.SOLUTION
-                            objupd.Status = o.Status
+
                             objupd.LAST_UPD = Date.Now
 
                         End If

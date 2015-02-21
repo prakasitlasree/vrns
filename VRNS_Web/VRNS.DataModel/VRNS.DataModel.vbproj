@@ -96,6 +96,9 @@
     <Compile Include="VRNS_Branch.vb">
       <DependentUpon>VRNS.tt</DependentUpon>
     </Compile>
+    <Compile Include="VRNS_Branch_Operation.vb">
+      <DependentUpon>VRNS.tt</DependentUpon>
+    </Compile>
     <Compile Include="VRNS_Department.vb">
       <DependentUpon>VRNS.tt</DependentUpon>
     </Compile>
@@ -121,6 +124,9 @@
       <DependentUpon>VRNS.tt</DependentUpon>
     </Compile>
     <Compile Include="VRNS_Member.vb">
+      <DependentUpon>VRNS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VRNS_Region.vb">
       <DependentUpon>VRNS.tt</DependentUpon>
     </Compile>
     <Compile Include="VRNS_ROLE.vb">
