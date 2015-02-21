@@ -99,20 +99,6 @@ Namespace EntityModel
         #End Region
         #Region "Navigation Properties"
     
-        Public Overridable Property VRNS_Device_Registered As VRNS_Device_Registered
-            Get
-                Return _vRNS_Device_Registered
-            End Get
-            Set(ByVal value As VRNS_Device_Registered)
-                If _vRNS_Device_Registered IsNot value Then
-                    Dim previousValue As VRNS_Device_Registered = _vRNS_Device_Registered
-                    _vRNS_Device_Registered = value
-                    FixupVRNS_Device_Registered(previousValue)
-                End If
-            End Set
-        End Property
-        Private _vRNS_Device_Registered As VRNS_Device_Registered
-    
         Public Overridable Property VRNS_JOB As VRNS_JOB
             Get
                 Return _vRNS_JOB
@@ -178,24 +164,24 @@ Namespace EntityModel
             End Set
         End Property
         Private _vRNS_Maintainance_Detail As ICollection(Of VRNS_Maintainance_Detail)
+    
+        Public Overridable Property VRNS_Device_Registered As VRNS_Device_Registered
+            Get
+                Return _vRNS_Device_Registered
+            End Get
+            Set(ByVal value As VRNS_Device_Registered)
+                If _vRNS_Device_Registered IsNot value Then
+                    Dim previousValue As VRNS_Device_Registered = _vRNS_Device_Registered
+                    _vRNS_Device_Registered = value
+                    FixupVRNS_Device_Registered(previousValue)
+                End If
+            End Set
+        End Property
+        Private _vRNS_Device_Registered As VRNS_Device_Registered
 
         #End Region
         #Region "Association Fixup"
         Private _settingFK As Boolean = False
-    
-        Private Sub FixupVRNS_Device_Registered(ByVal previousValue As VRNS_Device_Registered)
-            If previousValue IsNot Nothing AndAlso previousValue.VRNS_Maintainance_Record.Contains(Me) Then
-                previousValue.VRNS_Maintainance_Record.Remove(Me)
-            End If
-            If VRNS_Device_Registered IsNot Nothing Then
-                If Not VRNS_Device_Registered.VRNS_Maintainance_Record.Contains(Me) Then
-                    VRNS_Device_Registered.VRNS_Maintainance_Record.Add(Me)
-                End If
-                If Not Equals(Dev_Regis_ID, VRNS_Device_Registered.ID) Then
-                    Dev_Regis_ID = VRNS_Device_Registered.ID
-                End If
-            End If
-        End Sub
     
         Private Sub FixupVRNS_JOB(ByVal previousValue As VRNS_JOB)
             If previousValue IsNot Nothing AndAlso previousValue.VRNS_Maintainance_Record.Contains(Me) Then
@@ -242,6 +228,20 @@ Namespace EntityModel
                 End If
             ElseIf Not _settingFK Then
                 MA_TOPIC_CODE = Nothing
+            End If
+        End Sub
+    
+        Private Sub FixupVRNS_Device_Registered(ByVal previousValue As VRNS_Device_Registered)
+            If previousValue IsNot Nothing AndAlso previousValue.VRNS_Maintainance_Record.Contains(Me) Then
+                previousValue.VRNS_Maintainance_Record.Remove(Me)
+            End If
+            If VRNS_Device_Registered IsNot Nothing Then
+                If Not VRNS_Device_Registered.VRNS_Maintainance_Record.Contains(Me) Then
+                    VRNS_Device_Registered.VRNS_Maintainance_Record.Add(Me)
+                End If
+                If Not Equals(Dev_Regis_ID, VRNS_Device_Registered.ID) Then
+                    Dev_Regis_ID = VRNS_Device_Registered.ID
+                End If
             End If
         End Sub
         Private Sub FixupVRNS_Maintainance_Detail(ByVal sender As Object, ByVal e As NotifyCollectionChangedEventArgs)

@@ -67,16 +67,6 @@ Partial Public Class VRNSEntities
     End Property
     Private _vRNS_Department As ObjectSet(Of VRNS_Department)
 
-    Public ReadOnly Property VRNS_Device_Registered() As ObjectSet(Of VRNS_Device_Registered)
-        Get
-            If _vRNS_Device_Registered Is Nothing Then
-                _vRNS_Device_Registered = CreateObjectSet(Of VRNS_Device_Registered)("VRNS_Device_Registered")
-            End If
-            Return _vRNS_Device_Registered
-        End Get
-    End Property
-    Private _vRNS_Device_Registered As ObjectSet(Of VRNS_Device_Registered)
-
     Public ReadOnly Property VRNS_Employee() As ObjectSet(Of VRNS_Employee)
         Get
             If _vRNS_Employee Is Nothing Then
@@ -186,6 +176,16 @@ Partial Public Class VRNSEntities
         End Get
     End Property
     Private _vRNS_Region As ObjectSet(Of VRNS_Region)
+
+    Public ReadOnly Property VRNS_Device_Registered() As ObjectSet(Of VRNS_Device_Registered)
+        Get
+            If _vRNS_Device_Registered Is Nothing Then
+                _vRNS_Device_Registered = CreateObjectSet(Of VRNS_Device_Registered)("VRNS_Device_Registered")
+            End If
+            Return _vRNS_Device_Registered
+        End Get
+    End Property
+    Private _vRNS_Device_Registered As ObjectSet(Of VRNS_Device_Registered)
 
 #End Region
 #Region "Function Imports"

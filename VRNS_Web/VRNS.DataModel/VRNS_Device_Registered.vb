@@ -21,11 +21,7 @@ Namespace EntityModel
     
         Public Overridable Property BRANCH_CODE As String
     
-        Public Overridable Property WAN_IP As String
-    
         Public Overridable Property LAN_IP As String
-    
-        Public Overridable Property LAN_SUBNET As String
     
         Public Overridable Property ISP As String
     
