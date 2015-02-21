@@ -216,7 +216,6 @@
     <Content Include="Images\sa\audit.jpg" />
     <Content Include="Images\sa\Authorize.png" />
     <Content Include="Images\sa\C7.png" />
-    <Content Include="Images\sa\e2eflow.png" />
     <Content Include="Images\sa\EIC.png" />
     <Content Include="Images\sa\Financial.png" />
     <Content Include="Images\sa\FollowUp.png" />
@@ -232,9 +231,7 @@
     <Content Include="Images\sa\red-large.png" />
     <Content Include="Images\sa\red-small.png" />
     <Content Include="Images\sa\Report.jpg" />
-    <Content Include="Images\sa\sa.png" />
     <Content Include="Images\sa\SAHeader.png" />
-    <Content Include="Images\sa\sa_report.png" />
     <Content Include="Images\sa\task.png" />
     <Content Include="Images\sa\under.png" />
     <Content Include="Images\sa\vw_rpt.png" />
@@ -379,7 +376,9 @@
     <Content Include="UserControl\LeftMenuEngineer.ascx" />
     <Content Include="UserControl\LeftMenuMasterData.ascx" />
     <Content Include="UserControl\LeftMenuTechnical.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

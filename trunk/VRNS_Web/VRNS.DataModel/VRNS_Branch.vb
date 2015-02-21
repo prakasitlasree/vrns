@@ -25,6 +25,26 @@ Namespace EntityModel
     
         Public Overridable Property MOBILE As String
     
+        Public Overridable Property OPERATION_ID As Nullable(Of Integer)
+            Get
+                Return _oPERATION_ID
+            End Get
+            Set(ByVal value As Nullable(Of Integer))
+                Try
+                    _settingFK = True
+                    If Not Equals (_oPERATION_ID, value) Then
+                        If VRNS_Branch_Operation IsNot Nothing AndAlso Not Equals(VRNS_Branch_Operation.ID, value) Then
+                            VRNS_Branch_Operation = Nothing
+                        End If
+                        _oPERATION_ID = value
+                    End If
+                Finally
+                    _settingFK = False
+                End Try
+            End Set
+        End Property
+        Private _oPERATION_ID As Nullable(Of Integer)
+    
         Public Overridable Property LAST_UPD As Nullable(Of Date)
     
         Public Overridable Property LAST_UPD_LOGIN As String
@@ -33,6 +53,20 @@ Namespace EntityModel
 
         #End Region
         #Region "Navigation Properties"
+    
+        Public Overridable Property VRNS_Branch_Operation As VRNS_Branch_Operation
+            Get
+                Return _vRNS_Branch_Operation
+            End Get
+            Set(ByVal value As VRNS_Branch_Operation)
+                If _vRNS_Branch_Operation IsNot value Then
+                    Dim previousValue As VRNS_Branch_Operation = _vRNS_Branch_Operation
+                    _vRNS_Branch_Operation = value
+                    FixupVRNS_Branch_Operation(previousValue)
+                End If
+            End Set
+        End Property
+        Private _vRNS_Branch_Operation As VRNS_Branch_Operation
         Public Overridable Property VRNS_Employee As ICollection(Of VRNS_Employee)
             Get
                 If _vRNS_Employee Is Nothing Then
@@ -60,6 +94,23 @@ Namespace EntityModel
 
         #End Region
         #Region "Association Fixup"
+        Private _settingFK As Boolean = False
+    
+        Private Sub FixupVRNS_Branch_Operation(ByVal previousValue As VRNS_Branch_Operation)
+            If previousValue IsNot Nothing AndAlso previousValue.VRNS_Branch.Contains(Me) Then
+                previousValue.VRNS_Branch.Remove(Me)
+            End If
+            If VRNS_Branch_Operation IsNot Nothing Then
+                If Not VRNS_Branch_Operation.VRNS_Branch.Contains(Me) Then
+                    VRNS_Branch_Operation.VRNS_Branch.Add(Me)
+                End If
+                If Not Equals(OPERATION_ID, VRNS_Branch_Operation.ID) Then
+                    OPERATION_ID = VRNS_Branch_Operation.ID
+                End If
+            ElseIf Not _settingFK Then
+                OPERATION_ID = Nothing
+            End If
+        End Sub
         Private Sub FixupVRNS_Employee(ByVal sender As Object, ByVal e As NotifyCollectionChangedEventArgs)
             If e.NewItems IsNot Nothing Then
                 For Each item As VRNS_Employee In e.NewItems
