@@ -121,9 +121,7 @@
           </Key>
           <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="BRANCH_CODE" Type="nvarchar" MaxLength="30" />
-          <Property Name="WAN_IP" Type="nvarchar" MaxLength="15" />
           <Property Name="LAN_IP" Type="nvarchar" MaxLength="15" />
-          <Property Name="LAN_SUBNET" Type="nvarchar" MaxLength="15" />
           <Property Name="ISP" Type="nvarchar" MaxLength="250" />
           <Property Name="Cur_Status_CODE" Type="int" />
           <Property Name="Cur_Status_UPD" Type="datetime" />
@@ -454,7 +452,6 @@
           <EntitySet Name="VRNS_Branch" EntityType="VRNSModel.VRNS_Branch" />
           <EntitySet Name="VRNS_Branch_Operation" EntityType="VRNSModel.VRNS_Branch_Operation" />
           <EntitySet Name="VRNS_Department" EntityType="VRNSModel.VRNS_Department" />
-          <EntitySet Name="VRNS_Device_Registered" EntityType="VRNSModel.VRNS_Device_Registered" />
           <EntitySet Name="VRNS_Employee" EntityType="VRNSModel.VRNS_Employee" />
           <EntitySet Name="VRNS_JOB" EntityType="VRNSModel.VRNS_JOB" />
           <EntitySet Name="VRNS_MA_Team" EntityType="VRNSModel.VRNS_MA_Team" />
@@ -474,14 +471,6 @@
           <AssociationSet Name="FK_VRNS_Employee_VRNS_Department" Association="VRNSModel.FK_VRNS_Employee_VRNS_Department">
             <End Role="VRNS_Department" EntitySet="VRNS_Department" />
             <End Role="VRNS_Employee" EntitySet="VRNS_Employee" />
-          </AssociationSet>
-          <AssociationSet Name="FK_VRNS_Device_Registered_VRNS_Status" Association="VRNSModel.FK_VRNS_Device_Registered_VRNS_Status">
-            <End Role="VRNS_Status" EntitySet="VRNS_Status" />
-            <End Role="VRNS_Device_Registered" EntitySet="VRNS_Device_Registered" />
-          </AssociationSet>
-          <AssociationSet Name="FK_VRNS_Maintainance_Record_VRNS_Device_Registered" Association="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Device_Registered">
-            <End Role="VRNS_Device_Registered" EntitySet="VRNS_Device_Registered" />
-            <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
           </AssociationSet>
           <AssociationSet Name="FK_VRNS_Employee_VRNS_Title" Association="VRNSModel.FK_VRNS_Employee_VRNS_Title">
             <End Role="VRNS_Title" EntitySet="VRNS_Title" />
@@ -522,6 +511,15 @@
             <End Role="VRNS_Member" EntitySet="VRNS_Member" />
           </AssociationSet>
           <EntitySet Name="VRNS_Region" EntityType="VRNSModel.VRNS_Region" />
+          <EntitySet Name="VRNS_Device_Registered" EntityType="VRNSModel.VRNS_Device_Registered" />
+          <AssociationSet Name="FK_VRNS_Device_Registered_VRNS_Status" Association="VRNSModel.FK_VRNS_Device_Registered_VRNS_Status">
+            <End Role="VRNS_Status" EntitySet="VRNS_Status" />
+            <End Role="VRNS_Device_Registered" EntitySet="VRNS_Device_Registered" />
+          </AssociationSet>
+          <AssociationSet Name="FK_VRNS_Maintainance_Record_VRNS_Device_Registered" Association="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Device_Registered">
+            <End Role="VRNS_Device_Registered" EntitySet="VRNS_Device_Registered" />
+            <End Role="VRNS_Maintainance_Record" EntitySet="VRNS_Maintainance_Record" />
+          </AssociationSet>
           </EntityContainer>
         <ComplexType Name="GET_TOP10_DOWN_Result">
           <Property Type="Int64" Name="Dev_Regis_ID" Nullable="false" />
@@ -568,27 +566,6 @@
           <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="VRNS_Employee" Relationship="VRNSModel.FK_VRNS_Employee_VRNS_Department" FromRole="VRNS_Department" ToRole="VRNS_Employee" />
-        </EntityType>
-        <EntityType Name="VRNS_Device_Registered">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="BRANCH_CODE" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="WAN_IP" MaxLength="15" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="LAN_IP" MaxLength="15" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="LAN_SUBNET" MaxLength="15" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="ISP" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="Cur_Status_CODE" />
-          <Property Type="DateTime" Name="Cur_Status_UPD" />
-          <Property Type="Boolean" Name="Cur_Status_F" />
-          <Property Type="Int32" Name="Prev_Status_CODE" />
-          <Property Type="DateTime" Name="Prev_Status_UPD" />
-          <Property Type="DateTime" Name="LAST_UPD" />
-          <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="VRNS_Status" Relationship="VRNSModel.FK_VRNS_Device_Registered_VRNS_Status" FromRole="VRNS_Device_Registered" ToRole="VRNS_Status" />
-          <NavigationProperty Name="VRNS_Maintainance_Record" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Device_Registered" FromRole="VRNS_Device_Registered" ToRole="VRNS_Maintainance_Record" />
         </EntityType>
         <EntityType Name="VRNS_Employee">
           <Key>
@@ -682,12 +659,12 @@
           <Property Type="DateTime" Name="LAST_UPD" />
           <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="VRNS_Device_Registered" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Device_Registered" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_Device_Registered" />
           <NavigationProperty Name="VRNS_JOB" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_JOB" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_JOB" />
           <NavigationProperty Name="VRNS_JOB1" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_JOB" />
           <NavigationProperty Name="VRNS_MA_Topic" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_MA_Topic" />
           <NavigationProperty Name="VRNS_Maintainance_Detail" Relationship="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_Maintainance_Record" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_Maintainance_Detail" />
           <Property Type="Boolean" Name="Status" />
+          <NavigationProperty Name="VRNS_Device_Registered" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Device_Registered" FromRole="VRNS_Maintainance_Record" ToRole="VRNS_Device_Registered" />
         </EntityType>
         <EntityType Name="VRNS_Status">
           <Key>
@@ -745,30 +722,6 @@
             </Principal>
             <Dependent Role="VRNS_Employee">
               <PropertyRef Name="DEP_CODE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_VRNS_Device_Registered_VRNS_Status">
-          <End Type="VRNSModel.VRNS_Status" Role="VRNS_Status" Multiplicity="0..1" />
-          <End Type="VRNSModel.VRNS_Device_Registered" Role="VRNS_Device_Registered" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="VRNS_Status">
-              <PropertyRef Name="CODE" />
-            </Principal>
-            <Dependent Role="VRNS_Device_Registered">
-              <PropertyRef Name="Cur_Status_CODE" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_VRNS_Maintainance_Record_VRNS_Device_Registered">
-          <End Type="VRNSModel.VRNS_Device_Registered" Role="VRNS_Device_Registered" Multiplicity="1" />
-          <End Type="VRNSModel.VRNS_Maintainance_Record" Role="VRNS_Maintainance_Record" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="VRNS_Device_Registered">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="VRNS_Maintainance_Record">
-              <PropertyRef Name="Dev_Regis_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -923,6 +876,49 @@
           <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="VRNS_Device_Registered">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="BRANCH_CODE" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAN_IP" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ISP" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Cur_Status_CODE" />
+          <Property Type="DateTime" Name="Cur_Status_UPD" />
+          <Property Type="Boolean" Name="Cur_Status_F" />
+          <Property Type="Int32" Name="Prev_Status_CODE" />
+          <Property Type="DateTime" Name="Prev_Status_UPD" />
+          <Property Type="DateTime" Name="LAST_UPD" />
+          <Property Type="String" Name="LAST_UPD_LOGIN" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAST_UPD_DISPLAY_NM" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="VRNS_Status" Relationship="VRNSModel.FK_VRNS_Device_Registered_VRNS_Status" FromRole="VRNS_Device_Registered" ToRole="VRNS_Status" />
+          <NavigationProperty Name="VRNS_Maintainance_Record" Relationship="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Device_Registered" FromRole="VRNS_Device_Registered" ToRole="VRNS_Maintainance_Record" />
+        </EntityType>
+        <Association Name="FK_VRNS_Device_Registered_VRNS_Status">
+          <End Type="VRNSModel.VRNS_Status" Role="VRNS_Status" Multiplicity="0..1" />
+          <End Type="VRNSModel.VRNS_Device_Registered" Role="VRNS_Device_Registered" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Status">
+              <PropertyRef Name="CODE" />
+            </Principal>
+            <Dependent Role="VRNS_Device_Registered">
+              <PropertyRef Name="Cur_Status_CODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_VRNS_Maintainance_Record_VRNS_Device_Registered">
+          <End Type="VRNSModel.VRNS_Device_Registered" Role="VRNS_Device_Registered" Multiplicity="1" />
+          <End Type="VRNSModel.VRNS_Maintainance_Record" Role="VRNS_Maintainance_Record" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VRNS_Device_Registered">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="VRNS_Maintainance_Record">
+              <PropertyRef Name="Dev_Regis_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -966,26 +962,6 @@
                 <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
                 <ScalarProperty Name="NAME" ColumnName="NAME" />
                 <ScalarProperty Name="CODE" ColumnName="CODE" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="VRNS_Device_Registered">
-            <EntityTypeMapping TypeName="VRNSModel.VRNS_Device_Registered">
-              <MappingFragment StoreEntitySet="VRNS_Device_Registered">
-                <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
-                <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
-                <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
-                <ScalarProperty Name="Prev_Status_UPD" ColumnName="Prev_Status_UPD" />
-                <ScalarProperty Name="Prev_Status_CODE" ColumnName="Prev_Status_CODE" />
-                <ScalarProperty Name="Cur_Status_F" ColumnName="Cur_Status_F" />
-                <ScalarProperty Name="Cur_Status_UPD" ColumnName="Cur_Status_UPD" />
-                <ScalarProperty Name="Cur_Status_CODE" ColumnName="Cur_Status_CODE" />
-                <ScalarProperty Name="ISP" ColumnName="ISP" />
-                <ScalarProperty Name="LAN_SUBNET" ColumnName="LAN_SUBNET" />
-                <ScalarProperty Name="LAN_IP" ColumnName="LAN_IP" />
-                <ScalarProperty Name="WAN_IP" ColumnName="WAN_IP" />
-                <ScalarProperty Name="BRANCH_CODE" ColumnName="BRANCH_CODE" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1140,6 +1116,24 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="VRNS_Device_Registered">
+            <EntityTypeMapping TypeName="VRNSModel.VRNS_Device_Registered">
+              <MappingFragment StoreEntitySet="VRNS_Device_Registered">
+                <ScalarProperty Name="LAST_UPD_DISPLAY_NM" ColumnName="LAST_UPD_DISPLAY_NM" />
+                <ScalarProperty Name="LAST_UPD_LOGIN" ColumnName="LAST_UPD_LOGIN" />
+                <ScalarProperty Name="LAST_UPD" ColumnName="LAST_UPD" />
+                <ScalarProperty Name="Prev_Status_UPD" ColumnName="Prev_Status_UPD" />
+                <ScalarProperty Name="Prev_Status_CODE" ColumnName="Prev_Status_CODE" />
+                <ScalarProperty Name="Cur_Status_F" ColumnName="Cur_Status_F" />
+                <ScalarProperty Name="Cur_Status_UPD" ColumnName="Cur_Status_UPD" />
+                <ScalarProperty Name="Cur_Status_CODE" ColumnName="Cur_Status_CODE" />
+                <ScalarProperty Name="ISP" ColumnName="ISP" />
+                <ScalarProperty Name="LAN_IP" ColumnName="LAN_IP" />
+                <ScalarProperty Name="BRANCH_CODE" ColumnName="BRANCH_CODE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -1160,11 +1154,10 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="VRNS" ZoomLevel="72">
+      <Diagram Name="VRNS" ZoomLevel="94">
         <EntityTypeShape EntityType="VRNSModel.VRNS_Branch" Width="1.5" PointX="0.75" PointY="20.25" Height="2.9417936197916674" />
         <EntityTypeShape EntityType="VRNSModel.VRNS_Branch_Operation" Width="1.5" PointX="1.5" PointY="28.25" Height="2.7494921875000031" />
         <EntityTypeShape EntityType="VRNSModel.VRNS_Department" Width="1.5" PointX="0.75" PointY="23.875" Height="2.3648893229166674" />
-        <EntityTypeShape EntityType="VRNSModel.VRNS_Device_Registered" Width="1.5" PointX="0.75" PointY="7.875" Height="4.0956022135416674" />
         <EntityTypeShape EntityType="VRNSModel.VRNS_Employee" Width="1.5" PointX="3" PointY="22.5" Height="4.480205078124996" />
         <EntityTypeShape EntityType="VRNSModel.VRNS_JOB" Width="1.5" PointX="0.75" PointY="1.75" Height="2.5571907552083393" />
         <EntityTypeShape EntityType="VRNSModel.VRNS_MA_Team" Width="1.5" PointX="3" PointY="18.125" Height="2.5571907552083388" />
@@ -1190,15 +1183,6 @@
           <ConnectorPoint PointX="2.6770838333333336" PointY="25.057444661458334" />
           <ConnectorPoint PointX="3" PointY="25.057444661458334" />
         </AssociationConnector>
-        <AssociationConnector Association="VRNSModel.FK_VRNS_Device_Registered_VRNS_Status" >
-          <ConnectorPoint PointX="1.875" PointY="12.75" />
-          <ConnectorPoint PointX="1.875" PointY="11.970602213541667" />
-        </AssociationConnector>
-        <AssociationConnector Association="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Device_Registered" >
-          <ConnectorPoint PointX="2.25" PointY="9.9228011067708337" />
-          <ConnectorPoint PointX="4.117189" PointY="9.9228011067708337" />
-          <ConnectorPoint PointX="4.117189" PointY="4.90330078125001" />
-        </AssociationConnector>
         <AssociationConnector Association="VRNSModel.FK_VRNS_Employee_VRNS_Title" >
           <ConnectorPoint PointX="2.25" PointY="33.182444661458334" />
           <ConnectorPoint PointX="3.78125" PointY="33.182444661458334" />
@@ -1210,30 +1194,44 @@
         </AssociationConnector>
         <AssociationConnector Association="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_Employee" >
           <ConnectorPoint PointX="4.5" PointY="24.740102539062498" />
-          <ConnectorPoint PointX="5.28125" PointY="24.740102539062498" />
-          <ConnectorPoint PointX="5.28125" PointY="4.5090950520833282" />
+          <ConnectorPoint PointX="6" PointY="24.740102539062498" />
+          <ConnectorPoint PointX="6" PointY="7.9802864583333246" />
+          <ConnectorPoint PointX="5.125" PointY="7.9802864583333246" />
+          <ConnectorPoint PointX="5.125" PointY="4.8840950520833282" />
+          <ConnectorPoint PointX="5.5104146666666667" PointY="4.8840950520833273" />
+          <ConnectorPoint PointX="5.6770813333333328" PointY="4.8840950520833282" />
+          <ConnectorPoint PointX="6" PointY="4.8840950520833282" />
+          <ConnectorPoint PointX="6" PointY="4.5090950520833282" />
         </AssociationConnector>
         <AssociationConnector Association="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_JOB" >
-          <ConnectorPoint PointX="2.25" PointY="3.0285953776041694" />
-          <ConnectorPoint PointX="3" PointY="3.0285953776041694" />
+          <ConnectorPoint PointX="2.25" PointY="3.4891501108805376" />
+          <ConnectorPoint PointX="3" PointY="3.4891501108805376" />
         </AssociationConnector>
         <AssociationConnector Association="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Maintainance_Record" >
-          <ConnectorPoint PointX="2.25" PointY="2.3267976888020847" />
-          <ConnectorPoint PointX="3" PointY="2.3267976888020847" />
+          <ConnectorPoint PointX="2.25" PointY="2.5570750554402686" />
+          <ConnectorPoint PointX="3" PointY="2.5570750554402686" />
         </AssociationConnector>
         <AssociationConnector Association="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_MA_Team" >
           <ConnectorPoint PointX="4.5" PointY="19.403595377604169" />
-          <ConnectorPoint PointX="5.265625" PointY="19.403595377604169" />
-          <ConnectorPoint PointX="5.265625" PointY="4.5090950520833282" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="19.403595377604169" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="19.403595377604169" />
+          <ConnectorPoint PointX="6.25" PointY="19.403595377604169" />
+          <ConnectorPoint PointX="6.25" PointY="8.2302864583333246" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="8.2302864583333246" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="8.2302864583333246" />
+          <ConnectorPoint PointX="5" PointY="8.2302864583333246" />
+          <ConnectorPoint PointX="5" PointY="5.0090950520833282" />
+          <ConnectorPoint PointX="5.041666666666667" PointY="5.0090950520833273" />
+          <ConnectorPoint PointX="5.208333333333333" PointY="5.0090950520833282" />
+          <ConnectorPoint PointX="5.593748" PointY="5.0090950520833282" />
+          <ConnectorPoint PointX="5.593748" PointY="4.5090950520833282" />
         </AssociationConnector>
         <AssociationConnector Association="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_MA_TOPIC" >
           <ConnectorPoint PointX="2.25" PointY="17.3749995" />
-          <ConnectorPoint PointX="4.75" PointY="17.3749995" />
-          <ConnectorPoint PointX="4.122880588903258" PointY="8.2144787384293423" />
-          <ConnectorPoint PointX="4.1114974110967424" PointY="8.04820125636757" />
-          <ConnectorPoint PointX="3.921873" PointY="5.27830078125001" />
-          <ConnectorPoint PointX="3.671873" PointY="5.27830078125001" />
-          <ConnectorPoint PointX="3.671873" PointY="4.90330078125001" />
+          <ConnectorPoint PointX="3.5" PointY="17.3749995" />
+          <ConnectorPoint PointX="3.5" PointY="5.4706022135416656" />
+          <ConnectorPoint PointX="3.75" PointY="5.4706022135416656" />
+          <ConnectorPoint PointX="3.75" PointY="5.0956022135416656" />
         </AssociationConnector>
         <AssociationConnector Association="VRNSModel.FK_VRNS_Maintainance_Detail_VRNS_Maintainance_Record" >
           <ConnectorPoint PointX="4.5" PointY="2.9420475260416641" />
@@ -1246,6 +1244,17 @@
           <ConnectorPoint PointX="3" PointY="36.807444661458334" />
         </AssociationConnector>
         <EntityTypeShape EntityType="VRNSModel.VRNS_Region" Width="1.5" PointX="5.375" PointY="5.75" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="VRNSModel.VRNS_Device_Registered" Width="1.5" PointX="3.75" PointY="12" Height="3.7109993489583388" />
+        <AssociationConnector Association="VRNSModel.FK_VRNS_Device_Registered_VRNS_Status" >
+          <ConnectorPoint PointX="3" PointY="13.8362939453125" />
+          <ConnectorPoint PointX="3.4166666666666665" PointY="13.8362939453125" />
+          <ConnectorPoint PointX="3.5833333333333335" PointY="13.8362939453125" />
+          <ConnectorPoint PointX="3.75" PointY="13.8362939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="VRNSModel.FK_VRNS_Maintainance_Record_VRNS_Device_Registered" >
+          <ConnectorPoint PointX="4.1875" PointY="12" />
+          <ConnectorPoint PointX="4.1875" PointY="5.0956022135416656" />
+        </AssociationConnector>
       </Diagram>
     </Diagrams>
   </Designer>
